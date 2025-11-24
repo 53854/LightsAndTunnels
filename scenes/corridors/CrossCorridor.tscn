@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://crosscorridor"]
+
+[ext_resource type="PackedScene" path="res://scenes/corridors/CorridorSegment.tscn" id="1_l1xbo"]
+[ext_resource type="StandardMaterial3D" path="res://materials/corridor_wall.tres" id="2_apcjy"]
+
+[sub_resource type="BoxMesh" id="1"]
+material = ExtResource("2_apcjy")
+size = Vector3(0.15, 1.6, 2.5)
+
+[sub_resource type="BoxMesh" id="2"]
+material = ExtResource("2_apcjy")
+size = Vector3(2.5, 1.6, 0.15)
+
+[sub_resource type="BoxShape3D" id="3"]
+size = Vector3(0.15, 1.6, 2.5)
+
+[sub_resource type="BoxShape3D" id="4"]
+size = Vector3(2.5, 1.6, 0.15)
+
+[node name="CrossCorridor" type="Node3D"]
+
+[node name="AxisZ" parent="." instance=ExtResource("1_l1xbo")]
+left_wall_enabled = false
+right_wall_enabled = false
+
+[node name="AxisX" parent="." instance=ExtResource("1_l1xbo")]
+rotation = Vector3(0, 1.5708, 0)
+left_wall_enabled = false
+right_wall_enabled = false
+
+[node name="RightWallBack" type="MeshInstance3D" parent="."]
+mesh = SubResource("1")
+position = Vector3(1.425, 0.8, -2.75)
+
+[node name="StaticBodyRightBack" type="StaticBody3D" parent="RightWallBack"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightWallBack/StaticBodyRightBack"]
+shape = SubResource("3")
+
+[node name="RightWallFront" type="MeshInstance3D" parent="."]
+mesh = SubResource("1")
+position = Vector3(1.425, 0.8, 2.75)
+
+[node name="StaticBodyRightFront" type="StaticBody3D" parent="RightWallFront"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightWallFront/StaticBodyRightFront"]
+shape = SubResource("3")
+
+[node name="LeftWallBack" type="MeshInstance3D" parent="."]
+mesh = SubResource("1")
+position = Vector3(-1.425, 0.8, -2.75)
+
+[node name="StaticBodyLeftBack" type="StaticBody3D" parent="LeftWallBack"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftWallBack/StaticBodyLeftBack"]
+shape = SubResource("3")
+
+[node name="LeftWallFront" type="MeshInstance3D" parent="."]
+mesh = SubResource("1")
+position = Vector3(-1.425, 0.8, 2.75)
+
+[node name="StaticBodyLeftFront" type="StaticBody3D" parent="LeftWallFront"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftWallFront/StaticBodyLeftFront"]
+shape = SubResource("3")
+
+[node name="TopWallRight" type="MeshInstance3D" parent="."]
+mesh = SubResource("2")
+position = Vector3(2.75, 0.8, 1.425)
+
+[node name="StaticBodyTopRight" type="StaticBody3D" parent="TopWallRight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopWallRight/StaticBodyTopRight"]
+shape = SubResource("4")
+
+[node name="TopWallLeft" type="MeshInstance3D" parent="."]
+mesh = SubResource("2")
+position = Vector3(-2.75, 0.8, 1.425)
+
+[node name="StaticBodyTopLeft" type="StaticBody3D" parent="TopWallLeft"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopWallLeft/StaticBodyTopLeft"]
+shape = SubResource("4")
+
+[node name="BottomWallRight" type="MeshInstance3D" parent="."]
+mesh = SubResource("2")
+position = Vector3(2.75, 0.8, -1.425)
+
+[node name="StaticBodyBottomRight" type="StaticBody3D" parent="BottomWallRight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BottomWallRight/StaticBodyBottomRight"]
+shape = SubResource("4")
+
+[node name="BottomWallLeft" type="MeshInstance3D" parent="."]
+mesh = SubResource("2")
+position = Vector3(-2.75, 0.8, -1.425)
+
+[node name="StaticBodyBottomLeft" type="StaticBody3D" parent="BottomWallLeft"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BottomWallLeft/StaticBodyBottomLeft"]
+shape = SubResource("4")
+
+[node name="MarkerNorth" type="Marker3D" parent="."]
+position = Vector3(0, 0, 4)
+
+[node name="MarkerSouth" type="Marker3D" parent="."]
+position = Vector3(0, 0, -4)
+
+[node name="MarkerEast" type="Marker3D" parent="."]
+position = Vector3(4, 0, 0)
+
+[node name="MarkerWest" type="Marker3D" parent="."]
+position = Vector3(-4, 0, 0)
+

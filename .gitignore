@@ -14,3 +14,10 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Godot-specific ignores
+*.uid
+
+# MacOS specific ignores
+.DS_Store
+__MACOSX/
