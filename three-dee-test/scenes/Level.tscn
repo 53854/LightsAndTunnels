@@ -1,0 +1,323 @@
+[gd_scene load_steps=6 format=3 uid="uid://levelscene"]
+
+[ext_resource type="PackedScene" uid="uid://doqe0ueqy0uaf" path="res://scenes/corridors/CorridorSegment.tscn" id="1_571js"]
+[ext_resource type="PackedScene" uid="uid://roombaplayer" path="res://scenes/player/RoombaPlayer.tscn" id="2_i7cwk"]
+[ext_resource type="Environment" path="res://environment/corridor_env.tres" id="3_1i3wa"]
+[ext_resource type="PackedScene" uid="uid://tcorridor" path="res://scenes/corridors/TCorridor.tscn" id="4_xhnm3"]
+[ext_resource type="PackedScene" uid="uid://crosscorridor" path="res://scenes/corridors/CrossCorridor.tscn" id="5_fc210"]
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_1i3wa")
+
+[node name="Corridors" type="Node3D" parent="."]
+
+[node name="SegmentA" parent="Corridors" instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046715736, 0, -0.054501772)
+
+[node name="SegmentCorner" parent="Corridors" instance=ExtResource("1_571js")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 11.912161, 0, 7.941245)
+
+[node name="SegmentC" parent="Corridors" instance=ExtResource("1_571js")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 14.8654995, 0, 7.941245)
+
+[node name="DemoT3" parent="Corridors" instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-0.9999997, 0, -0.00076787686, 0, 1, 0, 0.00076787686, 0, -0.9999997, -0.070718765, 0, 27.939095)
+
+[node name="DemoT2" parent="Corridors" instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-0.0025306907, 0, 0.9999968, 0, 1, 0, -0.9999968, 0, -0.0025306907, -12.004309, 0, 27.939095)
+
+[node name="DemoT" parent="Corridors" instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.028383, 0, 15.966862)
+
+[node name="DemoCross" parent="Corridors" instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028383255, 0, 15.966862)
+
+[node name="SegmentA2" parent="Corridors" instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.052975655, 0, 35.918163)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5968382, 16.138462)
+light_color = Color(0.057124317, 0.88605016, 0.9078925, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.03862, 1.5968382, 15.877563)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.03862, 1.5968382, 28.027996)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.839303, 1.5968382, 52.390133)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.456738, 1.5968382, 52.25037)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 1.5968382, 28.027996)
+light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
+
+[node name="DemoCross2" parent="Corridors" instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.828508, 0, 7.9437113)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.539217, 1.42015, 7.977453)
+light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
+light_energy = 6.608
+light_size = 0.701
+
+[node name="DemoT4" parent="Corridors" instance=ExtResource("4_xhnm3")]
+transform = Transform3D(0.9999969, 0, 0.0025306472, 0, 1, 0, -0.0025306472, 0, 0.9999969, -0.045980453, 0, 7.942112)
+
+[node name="Player" parent="." instance=ExtResource("2_i7cwk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71798754, 0.2, -3.5475254)
+
+[node name="CorridorSegment" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08033508, 0, 43.97598)
+
+[node name="CrossCorridor" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09997749, 0, 52.006004)
+
+[node name="TCorridor" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.037175, 0, 52.005733)
+
+[node name="CorridorSegment2" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09609127, 0, 60.033943)
+
+[node name="CorridorSegment3" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.8798294, 0, 51.99532)
+
+[node name="TCorridor2" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.077949524, -1.9073486e-06, 71.28601)
+
+[node name="TCorridor3" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.069487, 0, 71.25279)
+
+[node name="CorridorSegment4" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5323007, -12.075662, 0, 62.13604)
+
+[node name="CorridorSegment5" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6229671, -0.07339287, 0, 21.691639)
+
+[node name="CorridorSegment6" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.843384, -9.536743e-07, -0.008169174)
+
+[node name="TCorridor4" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.869156, 0, -7.904874)
+
+[node name="CorridorSegment7" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.859848, 0, -7.9105377)
+
+[node name="TCorridor5" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.031399727, 0, -7.918301)
+
+[node name="TCorridor6" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.110012, 0, 7.9527483)
+
+[node name="TCorridor7" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.116608, 0, -0.07424128)
+
+[node name="CorridorSegment8" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.69573, 0, -4.823015)
+
+[node name="CorridorSegment9" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.39999998, 0, 1, 0, -1, 0, -1.7484554e-08, 25, 0, -0.0789814)
+
+[node name="CorridorSegment10" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.73332006, 0, 1, 0, -1, 0, -3.2054437e-08, 27.042267, 0, -4.801062)
+
+[node name="CorridorSegment11" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5463278, 38.67304, 1.9073486e-06, -5.627366)
+
+[node name="TCorridor8" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.871443, 0, -19.550148)
+
+[node name="CorridorSegment12" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30.766933, 0, -19.557384)
+
+[node name="TCorridor9" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 38.66167, -9.536743e-07, -19.542511)
+
+[node name="CorridorSegment15" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 1.3629731, 0, 1, 0, -0.99999994, 0, -5.9577445e-08, 13.425192, 0, -19.580582)
+
+[node name="TCorridor10" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036814213, 0, -19.601955)
+
+[node name="CorridorSegment16" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.72227097, 0, -24.601437)
+
+[node name="CorridorSegment17" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.546565, -0.040655375, 0, -13.470845)
+
+[node name="TCorridor11" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.036439, 0, 4.6919174)
+
+[node name="CorridorSegment18" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.81719446, 0, 1, 0, -1, 0, -3.5720703e-08, -4.802287, 0, 4.6858454)
+
+[node name="CrossCorridor2" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.021967, 0, 4.6761837)
+
+[node name="CorridorSegment19" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.3767424, -20.028526, 0, -7.630162)
+
+[node name="TCorridor12" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.038284, 9.536743e-07, -24.610092)
+
+[node name="CorridorSegment20" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.4207764, 0, 1, 0, -1, 0, -6.210411e-08, -10.375462, 0, -24.61977)
+
+[node name="TCorridor13" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.95949, 0, 4.6765203)
+
+[node name="CorridorSegment22" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.969093, 1.9073486e-06, -3.2804213)
+
+[node name="CrossCorridor3" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.940493, -1.9073486e-06, -11.283845)
+
+[node name="CorridorSegment23" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.8623916, 0, 1, 0, -1, 0, -3.7696335e-08, -24.969187, 1.9073486e-06, -11.278146)
+
+[node name="TCorridor14" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.921814, 0, -24.59537)
+
+[node name="CorridorSegment24" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.71765435, -31.949594, 0, -18.075756)
+
+[node name="TCorridor15" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.854258, 0, 27.960903)
+
+[node name="TCorridor16" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.07816, 0, 19.873692)
+
+[node name="TCorridor17" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23.845646, 0, 20.014147)
+
+[node name="CorridorSegment13" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -35.841553, 0, 20.039003)
+
+[node name="CorridorSegment14" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.674858, -1.9073486e-06, 52.00543)
+
+[node name="CrossCorridor4" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.618137, 0, 52.011833)
+
+[node name="CorridorSegment21" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.625372, 0, 59.87915)
+
+[node name="TCorridor18" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.63044, 0, 71.272766)
+
+[node name="CorridorSegment25" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 2.1185157, 0, 1, 0, -1, 0, -9.2603266e-08, 11.56142, 0, 71.28)
+
+[node name="CorridorSegment26" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.385281, 0, 1, 0, -1, 0, -6.055255e-08, 9.398788, 0, 15.95006)
+
+[node name="TCorridor19" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.832167, 0, 15.9524765)
+
+[node name="CorridorSegment27" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.831827, 0, 23.891672)
+
+[node name="CrossCorridor5" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.827723, 0, 31.831818)
+
+[node name="CorridorSegment28" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 2.198021, 0, 1, 0, -0.99999994, 0, -9.607856e-08, 10.067878, 0, 31.83799)
+
+[node name="TCorridor20" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.775436, 0, 43.801914)
+
+[node name="CorridorSegment29" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 2.1849158, 0, 1, 0, -0.99999994, 0, -9.550569e-08, 10.086805, -1.9073486e-06, 43.795204)
+
+[node name="CorridorSegment30" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30.823612, -1.9073486e-06, 31.851845)
+
+[node name="CrossCorridor6" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.076287, 0, 78.916)
+
+[node name="TCorridor21" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.921465, 0, 78.91674)
+
+[node name="CorridorSegment31" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3682466, -23.945324, 1.9073486e-06, 88.23155)
+
+[node name="CorridorSegment32" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.9210417, 0, 1, 0, -1, 0, -8.39714e-08, 35.244637, 0, 52.00952)
+
+[node name="CrossCorridor7" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.744537, 0, 51.989655)
+
+[node name="CorridorSegment33" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.07507, 46.726994, 0, 43.752365)
+
+[node name="CorridorSegment34" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.81186, 0, 31.833208)
+
+[node name="TCorridor22" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 46.67547, 0.039791882, 31.808525)
+
+[node name="CrossCorridor8" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.93309, 0, 97.65982)
+
+[node name="CorridorSegment35" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.9330741, 0, 1, 0, -1, 0, -8.449735e-08, 35.304604, 0, 71.27878)
+
+[node name="TCorridor23" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 46.748127, 0, 71.25375)
+
+[node name="CorridorSegment36" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9677123, 46.752052, 0, 59.64379)
+
+[node name="TCorridor24" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 58.56295, 0, 31.848116)
+
+[node name="CorridorSegment37" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.9232113, 58.53765, 0, 20.16202)
+
+[node name="TCorridor25" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 58.527, 0, 8.569767)
+
+[node name="CorridorSegment38" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 1.9064314, 0, 1, 0, -0.99999994, 0, -8.3332765e-08, 43.23617, 0, 8.557838)
+
+[node name="TCorridor26" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 58.552574, 0, 51.97883)
+
+[node name="CorridorSegment39" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.592118, 58.55472, 0, 41.82376)
+
+[node name="TCorridor27" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 58.586742, 0, 71.28128)
+
+[node name="CorridorSegment40" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.547124, 58.546898, 0, 61.444862)
+
+[node name="TCorridor28" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.005882, 0, 40.06595)
+
+[node name="CorridorSegment41" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.987198, 0, 40.044834)
+
+[node name="TCorridor29" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.829296, 1.9073486e-06, 20.036446)
+
+[node name="CorridorSegment42" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.6261448, -47.817593, 0, 30.06888)
+
+[node name="CorridorSegment43" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 2.100985, 0, 1, 0, -0.99999994, 0, -9.1836974e-08, -31.732828, 0, 40.07921)
+
+[node name="TCorridor30" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.812546, 0, 40.067444)
+
+[node name="CorridorSegment44" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.12674, -23.947142, 0, 66.47829)
