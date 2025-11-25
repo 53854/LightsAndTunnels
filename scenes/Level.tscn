@@ -14,306 +14,19 @@ environment = ExtResource("3_1i3wa")
 [node name="Corridors" type="Node3D" parent="."]
 
 [node name="SegmentA" parent="Corridors" instance=ExtResource("1_571js")]
-
-[node name="SegmentB" parent="Corridors" instance=ExtResource("1_571js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046715736, 0, -0.054501772)
 
 [node name="SegmentCorner" parent="Corridors" instance=ExtResource("1_571js")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 4, 0, 12)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 11.912161, 0, 7.941245)
 
 [node name="SegmentC" parent="Corridors" instance=ExtResource("1_571js")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 12, 0, 12)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 14.8654995, 0, 7.941245)
 
 [node name="DemoT3" parent="Corridors" instance=ExtResource("4_xhnm3")]
 transform = Transform3D(-0.9999997, 0, -0.00076787686, 0, 1, 0, 0.00076787686, 0, -0.9999997, -0.070718765, 0, 27.939095)
 
 [node name="DemoT2" parent="Corridors" instance=ExtResource("4_xhnm3")]
 transform = Transform3D(-0.0025306907, 0, 0.9999968, 0, 1, 0, -0.9999968, 0, -0.0025306907, -12.004309, 0, 27.939095)
-
-[node name="DemoT2" parent="Corridors/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306907, 0.014116287, 0, 21.409157)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/DemoT2"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/DemoT2/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999015, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999015, -18.620373, -1.563962, -9.56188)
-
-[node name="DemoT2" parent="Corridors/DemoT2/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.99990135, 0, 0.014119418, 0, 1, 0, -0.014119418, 0, -0.99990135, 91.34891, -1.563962, -12.8365135)
-
-[node name="DemoT2" parent="Corridors/DemoT2/OmniLight3D3/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999016, 0, 0.014119413, 0, 1, 0, -0.014119413, 0, -0.9999016, 82.29765, -1.563962, -53.617233)
-
-[node name="DemoT2" parent="Corridors/DemoT2/OmniLight3D3/DemoT2/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.014119368, 0, -0.9999016, 0, 1, 0, 0.9999016, 0, -0.014119368, -2.3882446, -1.5639622, -94.27728)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/DemoT2/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT3" parent="Corridors/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.99999976, 0, -0.0007678771, 0, 1, 0, 0.0007678771, 0, -0.99999976, 24.886183, 0, 45.00231)
-
-[node name="DemoT4" parent="Corridors/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306912, 0, 0.99999714, 0, 1, 0, -0.99999714, 0, -0.0025306912, 12.952598, -1, 45.002308)
-
-[node name="DemoT2" parent="Corridors/DemoT2/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306907, 0.014116287, 0, 21.409157)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/DemoT2/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -19.620365, -1.563962, -9.564409)
-
-[node name="DemoT3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.0007679239, 0, -1, 0, 1, 0, 1, 0, 0.0007679239, 7.4361343, 0, 48.278347)
-
-[node name="DemoT2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.002530694, 0, 0.9999973, 0, 1, 0, -0.9999973, 0, -0.002530694, 0.28970718, 0, 11.999004)
-
-[node name="DemoT2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.002530694, 0, 0.9999973, 0, 1, 0, -0.9999973, 0, -0.002530694, 0.28970718, 0, 11.999004)
-
-[node name="DemoT2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.002530694, 0, 0.9999973, 0, 1, 0, -0.9999973, 0, -0.002530694, 0.28970718, 0, 11.999004)
-
-[node name="DemoT3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.002530694, 0, 0.9999973, 0, 1, 0, -0.9999973, 0, -0.002530694, 0.28970718, 0, 11.999004)
-
-[node name="DemoT3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/DemoT2/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.99999726, 0, -0.0025307387, 0, 1, 0, 0.0025307387, 0, -0.99999726, 17.033726, 0, -52.068287)
-
-[node name="DemoT4" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.014119293, 0, 0.9999014, 0, 1, 0, -0.9999014, 0, 0.014119293, -47.130596, -1.563962, 92.784904)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("1_571js")]
-transform = Transform3D(-4.377216e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.377216e-08, 15.415203, 0, 48.260597)
-
-[node name="DemoT3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0007678354, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -0.0007678354, 20.43722, 0, 49.62226)
-
-[node name="DemoT2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306905, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306905, 0.014116287, 0, 21.409157)
-
-[node name="DemoT4" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -16.708721, -1.563962, -8.290745)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-4.377216e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.377216e-08, 12.458153, 0, 49.64)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000001, 0, 8.754432e-08, 0, 1, 0, -8.754432e-08, 0, -1.0000001, -69.81013, 0, 20.384045)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000001, 0, 8.754432e-08, 0, 1, 0, -8.754432e-08, 0, -1.0000001, 0.07819748, 0, 7.750469)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000001, 0, 8.754432e-08, 0, 1, 0, -8.754432e-08, 0, -1.0000001, -0.057678223, 0, -7.24889)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000001, 0, 8.6613e-08, 0, 1, 0, -8.6613e-08, 0, -1.0000001, 0.07819748, 0, 7.750475)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000001, 0, 8.6613e-08, 0, 1, 0, -8.6613e-08, 0, -1.0000001, -0.06674194, 0, -8.24884)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.3038516e-07, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 1.3038516e-07, -20.346706, 0, -39.066338)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000001, -0.05769348, 0, -7.2488937)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000001, -0.05769348, 0, -7.2488937)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000001, -0.057697296, 0, -7.2488956)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000001, -0.0667572, 0, -8.248852)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000004, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000004, -0.29325104, 0, -33.247765)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-2.1513551e-07, 0, -1.0000002, 0, 1, 0, 1.0000002, 0, -2.1513551e-07, -72.981995, 0, 1.412117)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.561137e-07, 0, 1, 0, -2.561137e-07, 0, -1.0000002, 0.07821083, 0, 7.750436)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5425106e-07, 0, 1, 0, -2.5425106e-07, 0, -1.0000002, -0.057691574, 0, -7.2488956)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5425106e-07, 0, 1, 0, -2.5425106e-07, 0, -1.0000002, 0.078214645, 0, 7.750435)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5425106e-07, 0, 1, 0, -2.5425106e-07, 0, -1.0000002, -0.05769348, 0, -7.24889)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5331974e-07, 0, 1, 0, -2.5331974e-07, 0, -1.0000002, 0.07821655, 0, 7.750431)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-2.0954758e-07, 0, -1.0000002, 0, 1, 0, 1.0000002, 0, -2.0954758e-07, -7.0936337, 0, -11.185265)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5331974e-07, 0, 1, 0, -2.5331974e-07, 0, -1.0000002, -0.13019943, 0, -15.24851)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.07822037, 0, 7.750435)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.035037994, 0, -8.04974)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.080947876, 0, 8.050419)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(2.933666e-07, 0, 1.0000002, 0, 1, 0, -1.0000002, 0, 2.933666e-07, 39.341057, 0, 3.4944534)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000002, 0, -3.3713877e-07, 0, 1, 0, 3.3713877e-07, 0, 1.0000002, 0.23504257, 0, -8.05155)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, -2.270855, 0, -52.830444)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.080947876, 0, 8.050419)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, -0.06404495, -0.5, -7.9488325)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.16464233, -0.5, 6.249592)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.514571e-07, 0, 1, 0, -2.514571e-07, 0, -1.0000002, -0.05952072, -0.5, -7.4488544)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5052577e-07, 0, 1, 0, -2.5052577e-07, 0, -1.0000002, 0.07915115, -0.5, 7.850418)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5052577e-07, 0, 1, 0, -2.5052577e-07, 0, -1.0000002, -0.16223526, -0.5, -7.7479324)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, 0.17915344, -0.5, 7.849514)
-
-[node name="SegmentA4" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-2.0861626e-07, 0, -1.0000002, 0, 1, 0, 1.0000002, 0, -2.0861626e-07, -122.15526, -7.3999996, -116.8463)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.514571e-07, 0, 1, 0, -2.514571e-07, 0, -1.0000002, 25.682205, 0, -47.08355)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, -2.270855, 0, -52.830444)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.080947876, 0, 8.050419)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, -0.06404495, -0.5, -7.9488325)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 0.16464233, -0.5, 6.249592)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.514571e-07, 0, 1, 0, -2.514571e-07, 0, -1.0000002, -0.05952072, -0.5, -7.4488544)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5052577e-07, 0, 1, 0, -2.5052577e-07, 0, -1.0000002, 0.07915115, -0.5, 7.850418)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5052577e-07, 0, 1, 0, -2.5052577e-07, 0, -1.0000002, -0.16223526, -0.5, -7.7479324)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, 0.17915344, -0.5, 7.849514)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.5238842e-07, 0, 1, 0, -2.5238842e-07, 0, -1.0000002, 135.0426, 0, -51.874832)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4959445e-07, 0, 1, 0, -2.4959445e-07, 0, -1.0000002, -0.2577057, -0.5, -7.2470512)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.514571e-07, 0, 1, 0, -2.514571e-07, 0, -1.0000002, 0.46281433, -0.5, 6.0468826)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.514571e-07, 0, 1, 0, -2.514571e-07, 0, -1.0000002, -0.05952072, -0.5, -7.4488544)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, -0.122657776, -0.5, 7.6522408)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, 0.43592072, -0.5, -7.9533634)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, 0.17915344, -0.5, 7.849514)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(2.924353e-07, 0, 1.0000002, 0, 1, 0, -1.0000002, 0, 2.924353e-07, -28.028595, -0.5, -25.995953)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, 0.17915344, -0.5, 7.849514)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(2.924353e-07, 0, 1.0000002, 0, 1, 0, -1.0000002, 0, 2.924353e-07, -112.78905, -0.5, 11.77364)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA4/SegmentA3/SegmentA2/SegmentA3/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-1.0000002, 0, 2.4866313e-07, 0, 1, 0, -2.4866313e-07, 0, -1.0000002, 0.17915344, -0.5, 7.849514)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000004, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000004, 0.078193665, 0, 7.750435)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-2.1513551e-07, 0, -1.0000002, 0, 1, 0, 1.0000002, 0, -2.1513551e-07, -7.794613, 0, 21.822311)
-
-[node name="SegmentA3" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000004, 0, -1.7136335e-07, 0, 1, 0, 1.7136335e-07, 0, 1.0000004, 0.078193665, 0, 7.750435)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/DemoT4/OmniLight3D3/DemoT2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA2/SegmentA3/SegmentA3" instance=ExtResource("1_571js")]
-transform = Transform3D(-2.1513551e-07, 0, -1.0000002, 0, 1, 0, 1.0000002, 0, -2.1513551e-07, -7.794613, 0, 21.822311)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/DemoT2/DemoT4/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="SegmentA2" parent="Corridors/DemoT2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 24.903927, 0, 52.98138)
-
-[node name="DemoT3" parent="Corridors/DemoT2/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999997, 0, -0.0007678773, 0, 1, 0, 0.0007678773, 0, -0.9999997, -12.994746, 0, -2.0936966)
-
-[node name="DemoT2" parent="Corridors/DemoT2/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306905, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306905, 0.0166471, 0, 20.40916)
-
-[node name="DemoT2" parent="Corridors/DemoT2/SegmentA2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306903, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306903, 69.339676, 0, -43.240772)
-
-[node name="DemoT2" parent="Corridors/DemoT2/SegmentA2/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306912, 0, 0.9999967, 0, 1, 0, -0.9999967, 0, -0.0025306912, 12.010326, 0, -0.07478523)
-
-[node name="DemoT3" parent="Corridors/DemoT2/SegmentA2/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999968, 0, -0.0025307355, 0, 1, 0, 0.0025307355, 0, -0.9999968, 12.053917, 0, -71.676476)
-
-[node name="DemoT2" parent="Corridors/DemoT2/SegmentA2/DemoT2/DemoT2/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306912, 0, 0.9999967, 0, 1, 0, -0.9999967, 0, -0.0025306912, 12.010326, 0, -0.07478523)
-
-[node name="DemoT4" parent="Corridors/DemoT2/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -19.620369, -1.563962, -9.56441)
-
-[node name="SegmentA2" parent="Corridors/DemoT2/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -12.977004, 0, 5.885376)
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Corridors/DemoT2"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 12.918281, 1.5968382, 45.091213)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="Corridors/DemoT2"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 24.956902, 1.5968382, 45.091213)
-light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
 
 [node name="DemoT" parent="Corridors" instance=ExtResource("4_xhnm3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.028383, 0, 15.966862)
@@ -328,287 +41,287 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.052975655, 0, 35.918163)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5968382, 16.138462)
 light_color = Color(0.057124317, 0.88605016, 0.9078925, 1)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Corridors"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.03862, 1.5968382, 15.877563)
+[node name="OmniLight3D6" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.839303, 1.5968382, 52.390133)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
-[node name="DemoT3" parent="Corridors/OmniLight3D2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999997, 0, -0.00076787686, 0, 1, 0, 0.00076787686, 0, -0.9999997, 41.629284, 0, 11.339094)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999968, 0, 1, 0, -0.9999968, 0, -0.0025306907, 29.695692, 0, 11.339094)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306907, 0.014116287, 0, 21.409157)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT2"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
+[node name="OmniLight3D7" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.456738, 1.5968382, 52.25037)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT2/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999017, 0, -0.014119334, 0, 1, 0, 0.014119334, 0, 0.9999017, -12.569784, -3.563962, -29.546642)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT2/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
+[node name="OmniLight3D8" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.456738, 1.5968382, 76.49858)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
-[node name="DemoT" parent="Corridors/OmniLight3D2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.671618, 0, -0.63313866)
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Corridors/OmniLight3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.66138, 1.5968382, -0.7224369)
+[node name="OmniLight3D9" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.024652, 1.5968382, 76.49858)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.66138, 1.5968382, 11.427996)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="SegmentA" parent="Corridors/OmniLight3D2" instance=ExtResource("1_571js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -50)
-
-[node name="SegmentB" parent="Corridors/OmniLight3D2" instance=ExtResource("1_571js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -42)
-
-[node name="SegmentCorner" parent="Corridors/OmniLight3D2" instance=ExtResource("1_571js")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -13, 0, -38)
-
-[node name="SegmentC" parent="Corridors/OmniLight3D2" instance=ExtResource("1_571js")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -5, 0, -38)
-
-[node name="DemoT4" parent="Corridors/OmniLight3D2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999968, 0, 1, 0, -0.9999968, 0, -0.0025306907, -29.00431, 0, -22.060905)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.002530691, 0, 0.999997, 0, 1, 0, -0.999997, 0, -0.002530691, 4.039411, 0, 11.419313)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.014119377, 0, -0.9999016, 0, 1, 0, 0.9999016, 0, -0.014119377, -9.633059, -1.563962, -4.5391254)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT4/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.99999976, 0, -0.0007678771, 0, 1, 0, 0.0007678771, 0, -0.99999976, 24.886183, 0, 45.00231)
-
-[node name="DemoT4" parent="Corridors/OmniLight3D2/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306912, 0, 0.99999714, 0, 1, 0, -0.99999714, 0, -0.0025306912, 12.952598, -1, 45.002308)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306907, 0.014116287, 0, 21.409157)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999968, 0, 0.002530646, 0, 1, 0, -0.002530646, 0, 0.9999968, -20.8638, 0, 5.2501926)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999967, 0, 0.0025306465, 0, 1, 0, -0.0025306465, 0, 0.9999967, 65.08114, 0, 11.120472)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/DemoT2/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.99999666, 0, -0.0025307331, 0, 1, 0, 0.0025307331, 0, -0.99999666, 121.9466, 0, 24.696787)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/DemoT2/DemoT2/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999967, 0, 0.0025306465, 0, 1, 0, -0.0025306465, 0, 0.9999967, 65.08114, 0, 11.120472)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/DemoT2/DemoT2/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999968, 0, 0.0025308179, 0, 1, 0, -0.0025308179, 0, 0.9999968, 0.84593964, 0, -39.24061)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/DemoT2/DemoT2/DemoT3/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.00015765615, -0.4999424, -0.86605835, 0.008857004, 0.8660254, -0.49992147, 0.9999608, -0.007591845, 0.0045645135, 47.263462, 0, 12.150063)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT4/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -18.620377, -1.563962, -9.559347)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119334, 0, 1, 0, 0.014119334, 0, 0.9999014, -9.403416, 0.43603945, 14.344002)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -8.968136, 2.0000005, 6.8490944)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT4/DemoT4/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT4" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 24.90646, 0, 51.98139)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT4/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999997, 0, -0.0007678773, 0, 1, 0, 0.0007678773, 0, -0.9999997, -12.994746, 0, -2.0936966)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT4/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306905, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306905, -0.98334885, 0, 20.406628)
-
-[node name="DemoT4" parent="Corridors/OmniLight3D2/DemoT4/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -19.620369, -1.563962, -9.56441)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT4/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -12.977004, 0, 5.885376)
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 12.918281, 1.5968382, 45.091213)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 24.956902, 1.5968382, 45.091213)
-light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
-
-[node name="DemoT5" parent="Corridors/OmniLight3D2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.028381, 0, -34.03314)
-
-[node name="DemoT4" parent="Corridors/OmniLight3D2/DemoT5" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999968, 0, 1, 0, -0.9999968, 0, -0.0025306907, -32.00431, 0, 15.939095)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306912, 0, 0.99999714, 0, 1, 0, -0.99999714, 0, -0.0025306912, 15.0140705, 0, 21.44712)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT5/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999015, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999015, -15.670996, -1.563962, 10.445648)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT5/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999998, 0, -0.0007678773, 0, 1, 0, 0.0007678773, 0, -0.9999998, 39.956993, 0, 17.040363)
-
-[node name="DemoT4" parent="Corridors/OmniLight3D2/DemoT5/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306912, 0, 0.99999726, 0, 1, 0, -0.99999726, 0, -0.0025306912, 28.023407, -1, 17.04036)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306907, 0.014116287, 0, 21.409157)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -18.620377, -1.563962, -9.559347)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119334, 0, 1, 0, 0.014119334, 0, 0.9999014, -9.403416, 0.43603945, 14.344002)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -8.968136, 2.0000005, 6.8490944)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, 7.6605988, -1.563962, 10.3033905)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3/DemoT2/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119334, 0, 1, 0, 0.014119334, 0, 0.9999014, -9.403416, 0.43603945, 14.344002)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3/DemoT2/DemoT3" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -8.968136, 2.0000005, 6.8490944)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/DemoT4/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 39.977272, 0, 24.019444)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999997, 0, -0.0007678773, 0, 1, 0, 0.0007678773, 0, -0.9999997, -12.994746, 0, -2.0936966)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306905, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306905, -0.98334885, 0, 20.406628)
-
-[node name="DemoT4" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/SegmentA2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999014, 0, -0.014119333, 0, 1, 0, 0.014119333, 0, 0.9999014, -19.620369, -1.563962, -9.56441)
-
-[node name="SegmentA2" parent="Corridors/OmniLight3D2/DemoT5/DemoT4/SegmentA2" instance=ExtResource("1_571js")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -12.977004, 0, 5.885376)
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT5/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 12.918281, 1.5968382, 45.091213)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="Corridors/OmniLight3D2/DemoT5/DemoT4"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 24.956902, 1.5968382, 45.091213)
-light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
-
-[node name="DemoT5" parent="Corridors/OmniLight3D2/DemoT5" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028381348, 0, 19.966862)
-
-[node name="DemoCross" parent="Corridors/OmniLight3D2" instance=ExtResource("5_fc210")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.028383, 0, -34.03314)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Corridors/OmniLight3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1.5968382, -33.861538)
-light_color = Color(0.057124317, 0.88605016, 0.9078925, 1)
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Corridors/OmniLight3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.03862, 1.5968382, -34.122437)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/OmniLight3D4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.9999997, 0, -0.00076787686, 0, 1, 0, 0.00076787686, 0, -0.9999997, 41.629284, 0, 11.339094)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/OmniLight3D4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999968, 0, 1, 0, -0.9999968, 0, -0.0025306907, 29.695692, 0, 11.339094)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.0025306907, 0, 0.9999969, 0, 1, 0, -0.9999969, 0, -0.0025306907, 0.014116287, 0, 21.409157)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.9999018, 0, -0.014119334, 0, 1, 0, 0.014119334, 0, 0.9999018, -8.544492, -3.563962, -39.53649)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT3" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.002530691, 0, 0.9999974, 0, 1, 0, -0.9999974, 0, -0.002530691, -40.633537, 0, -56.239136)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2/DemoT3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(0.99999684, 0, 0.002530646, 0, 1, 0, -0.002530646, 0, 0.99999684, -96.1415, 0, 51.922844)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2/DemoT3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT2" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2/DemoT3/OmniLight3D3" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(-0.014119377, 0, -0.99990183, 0, 1, 0, 0.99990183, 0, -0.014119377, -15.837948, -3.563962, 18.427343)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/OmniLight3D4/DemoT2/DemoT3/OmniLight3D3"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.020196915, 1.5968382, 21.498058)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="DemoT" parent="Corridors/OmniLight3D2/OmniLight3D4" instance=ExtResource("4_xhnm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.671618, 0, -0.63313866)
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Corridors/OmniLight3D2/OmniLight3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.66138, 1.5968382, -0.7224369)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors/OmniLight3D2/OmniLight3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.66138, 1.5968382, 11.427996)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="Player" parent="Corridors/OmniLight3D2" instance=ExtResource("2_i7cwk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0.20000005, -52)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.03862, 1.5968382, 28.027996)
+[node name="OmniLight3D10" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.024652, 1.5968382, 94.52745)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Corridors"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 1.5968382, 28.027996)
 light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
 
+[node name="DemoCross2" parent="Corridors" instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.828508, 0, 7.9437113)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.539217, 1.42015, 7.977453)
+light_color = Color(0.05882353, 0.8862745, 0.9098039, 1)
+light_energy = 6.608
+light_size = 0.701
+
+[node name="DemoT4" parent="Corridors" instance=ExtResource("4_xhnm3")]
+transform = Transform3D(0.9999969, 0, 0.0025306472, 0, 1, 0, -0.0025306472, 0, 0.9999969, -0.045980453, 0, 7.942112)
+
 [node name="Player" parent="." instance=ExtResource("2_i7cwk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71798754, 0.2, -3.5475254)
+
+[node name="CorridorSegment" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08033508, 0, 43.97598)
+
+[node name="CrossCorridor" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09997749, 0, 52.006004)
+
+[node name="TCorridor" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.037175, 0, 52.005733)
+
+[node name="CorridorSegment2" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09609127, 0, 60.033943)
+
+[node name="CorridorSegment3" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.8798294, 0, 51.99532)
+
+[node name="TCorridor2" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.077949524, -1.9073486e-06, 71.28601)
+
+[node name="TCorridor3" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.069487, 0, 71.25279)
+
+[node name="CorridorSegment4" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5323007, -12.075662, 0, 62.13604)
+
+[node name="CorridorSegment5" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6229671, -0.07339287, 0, 21.691639)
+
+[node name="CorridorSegment6" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.843384, -9.536743e-07, -0.008169174)
+
+[node name="TCorridor4" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.869156, 0, -7.904874)
+
+[node name="CorridorSegment7" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.859848, 0, -7.9105377)
+
+[node name="TCorridor5" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.031399727, 0, -7.918301)
+
+[node name="TCorridor6" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.110012, 0, 7.9527483)
+
+[node name="TCorridor7" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.116608, 0, -0.07424128)
+
+[node name="CorridorSegment8" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.69573, 0, -4.823015)
+
+[node name="CorridorSegment9" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.39999998, 0, 1, 0, -1, 0, -1.7484554e-08, 25, 0, -0.0789814)
+
+[node name="CorridorSegment10" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.73332006, 0, 1, 0, -1, 0, -3.2054437e-08, 27.042267, 0, -4.801062)
+
+[node name="CorridorSegment11" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5463278, 38.67304, 1.9073486e-06, -5.627366)
+
+[node name="TCorridor8" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.871443, 0, -19.550148)
+
+[node name="CorridorSegment12" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30.766933, 0, -19.557384)
+
+[node name="TCorridor9" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 38.66167, -9.536743e-07, -19.542511)
+
+[node name="CorridorSegment15" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 1.3629731, 0, 1, 0, -0.99999994, 0, -5.9577445e-08, 13.425192, 0, -19.580582)
+
+[node name="TCorridor10" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036814213, 0, -19.601955)
+
+[node name="CorridorSegment16" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.72227097, 0, -24.601437)
+
+[node name="CorridorSegment17" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.546565, -0.040655375, 0, -13.470845)
+
+[node name="TCorridor11" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.036439, 0, 4.6919174)
+
+[node name="CorridorSegment18" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.81719446, 0, 1, 0, -1, 0, -3.5720703e-08, -4.802287, 0, 4.6858454)
+
+[node name="CrossCorridor2" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.021967, 0, 4.6761837)
+
+[node name="CorridorSegment19" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.3767424, -20.028526, 0, -7.630162)
+
+[node name="TCorridor12" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20.038284, 9.536743e-07, -24.610092)
+
+[node name="CorridorSegment20" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.4207764, 0, 1, 0, -1, 0, -6.210411e-08, -10.375462, 0, -24.61977)
+
+[node name="TCorridor13" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.95949, 0, 4.6765203)
+
+[node name="CorridorSegment22" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.969093, 1.9073486e-06, -3.2804213)
+
+[node name="CrossCorridor3" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.940493, -1.9073486e-06, -11.283845)
+
+[node name="CorridorSegment23" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 0.8623916, 0, 1, 0, -1, 0, -3.7696335e-08, -24.969187, 1.9073486e-06, -11.278146)
+
+[node name="TCorridor14" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.921814, 0, -24.59537)
+
+[node name="CorridorSegment24" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.71765435, -31.949594, 0, -18.075756)
+
+[node name="TCorridor15" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.854258, 0, 27.960903)
+
+[node name="TCorridor16" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.07816, 0, 19.873692)
+
+[node name="TCorridor17" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23.845646, 0, 20.014147)
+
+[node name="CorridorSegment13" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -35.841553, 0, 20.039003)
+
+[node name="CorridorSegment14" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.674858, -1.9073486e-06, 52.00543)
+
+[node name="CrossCorridor4" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.618137, 0, 52.011833)
+
+[node name="CorridorSegment21" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.625372, 0, 59.87915)
+
+[node name="TCorridor18" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.63044, 0, 71.272766)
+
+[node name="CorridorSegment25" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 2.1185157, 0, 1, 0, -1, 0, -9.2603266e-08, 11.56142, 0, 71.28)
+
+[node name="CorridorSegment26" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.385281, 0, 1, 0, -1, 0, -6.055255e-08, 9.398788, 0, 15.95006)
+
+[node name="TCorridor19" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.832167, 0, 15.9524765)
+
+[node name="CorridorSegment27" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.831827, 0, 23.891672)
+
+[node name="CrossCorridor5" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.827723, 0, 31.831818)
+
+[node name="CorridorSegment28" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 2.198021, 0, 1, 0, -0.99999994, 0, -9.607856e-08, 10.067878, 0, 31.83799)
+
+[node name="TCorridor20" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.775436, 0, 43.801914)
+
+[node name="CorridorSegment29" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 2.1849158, 0, 1, 0, -0.99999994, 0, -9.550569e-08, 10.086805, -1.9073486e-06, 43.795204)
+
+[node name="CorridorSegment30" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30.823612, -1.9073486e-06, 31.851845)
+
+[node name="CrossCorridor6" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.076287, 0, 78.916)
+
+[node name="TCorridor21" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.921465, 0, 78.91674)
+
+[node name="CorridorSegment31" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3682466, -23.945324, 1.9073486e-06, 88.23155)
+
+[node name="CorridorSegment32" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.9210417, 0, 1, 0, -1, 0, -8.39714e-08, 35.244637, 0, 52.00952)
+
+[node name="CrossCorridor7" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.744537, 0, 51.989655)
+
+[node name="CorridorSegment33" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.07507, 46.726994, 0, 43.752365)
+
+[node name="CorridorSegment34" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.81186, 0, 31.833208)
+
+[node name="TCorridor22" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 46.67547, 0.039791882, 31.808525)
+
+[node name="CrossCorridor8" parent="." instance=ExtResource("5_fc210")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.93309, 0, 97.65982)
+
+[node name="CorridorSegment35" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1.9330741, 0, 1, 0, -1, 0, -8.449735e-08, 35.304604, 0, 71.27878)
+
+[node name="TCorridor23" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 46.748127, 0, 71.25375)
+
+[node name="CorridorSegment36" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9677123, 46.752052, 0, 59.64379)
+
+[node name="TCorridor24" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 58.56295, 0, 31.848116)
+
+[node name="CorridorSegment37" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.9232113, 58.53765, 0, 20.16202)
+
+[node name="TCorridor25" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 58.527, 0, 8.569767)
+
+[node name="CorridorSegment38" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 1.9064314, 0, 1, 0, -0.99999994, 0, -8.3332765e-08, 43.23617, 0, 8.557838)
+
+[node name="TCorridor26" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 58.552574, 0, 51.97883)
+
+[node name="CorridorSegment39" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.592118, 58.55472, 0, 41.82376)
+
+[node name="TCorridor27" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 58.586742, 0, 71.28128)
+
+[node name="CorridorSegment40" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.547124, 58.546898, 0, 61.444862)
+
+[node name="TCorridor28" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.005882, 0, 40.06595)
+
+[node name="CorridorSegment41" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.987198, 0, 40.044834)
+
+[node name="TCorridor29" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.829296, 1.9073486e-06, 20.036446)
+
+[node name="CorridorSegment42" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.6261448, -47.817593, 0, 30.06888)
+
+[node name="CorridorSegment43" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(-4.3711385e-08, 0, 2.100985, 0, 1, 0, -0.99999994, 0, -9.1836974e-08, -31.732828, 0, 40.07921)
+
+[node name="TCorridor30" parent="." instance=ExtResource("4_xhnm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.812546, 0, 40.067444)
+
+[node name="CorridorSegment44" parent="." instance=ExtResource("1_571js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.12674, -23.947142, 0, 66.47829)
