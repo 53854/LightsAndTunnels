@@ -41,20 +41,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.052975655, 0, 35.918163)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5968382, 16.138462)
 light_color = Color(0.057124317, 0.88605016, 0.9078925, 1)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Corridors"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.03862, 1.5968382, 15.877563)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Corridors"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.03862, 1.5968382, 28.027996)
-light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
-
 [node name="OmniLight3D6" type="OmniLight3D" parent="Corridors"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.839303, 1.5968382, 52.390133)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="Corridors"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.456738, 1.5968382, 52.25037)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.456738, 1.5968382, 76.49858)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.024652, 1.5968382, 76.49858)
+light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Corridors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.024652, 1.5968382, 94.52745)
 light_color = Color(0.89596826, 0.39892986, 0.7988065, 1)
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Corridors"]
