@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cs75fn0wj2dvw" path="res://scripts/roomba_player.gd" id="1_sk8s6"]
 [ext_resource type="Environment" uid="uid://blshetwcm1dgp" path="res://environment/corridor_env.tres" id="2_alnnp"]
+[ext_resource type="PackedScene" uid="uid://mobilecontrols" path="res://scenes/ui/MobileControls.tscn" id="3_mobile"]
 
 [sub_resource type="SphereShape3D" id="1"]
 radius = 0.4
@@ -25,3 +26,5 @@ environment = ExtResource("2_alnnp")
 [node name="BodyMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.2, 0, 0, 0, 0.4, 0, 0, 0)
 mesh = SubResource("2")
+
+[node name="MobileControls" parent="." instance=ExtResource("3_mobile")]

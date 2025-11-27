@@ -10,6 +10,10 @@ extends CharacterBody3D
 var _pitch: float = 0.0
 var _default_gravity: float = float(ProjectSettings.get_setting("physics/3d/default_gravity", 9.8))
 
+# Mobile Control Flags
+var turning_left: bool = false
+var turning_right: bool = false
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -29,6 +33,12 @@ func _yaw_pitch(relative: Vector2) -> void:
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction := (global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+	# Tank Controls Rotation
+	if turning_left:
+		rotation.y += 2.0 * delta
+	if turning_right:
+		rotation.y -= 2.0 * delta
 
 	if direction != Vector3.ZERO:
 		velocity.x = move_toward(velocity.x, direction.x * move_speed, acceleration * delta)
