@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://doqe0ueqy0uaf"]
+[gd_scene load_steps=13 format=3 uid="uid://doqe0ueqy0uaf"]
 
-[ext_resource type="Material" path="res://materials/corridor_floor.tres" id="1_ku3e8"]
-[ext_resource type="Material" path="res://materials/corridor_wall.tres" id="2_judyv"]
+[ext_resource type="Material" uid="uid://c6wotigry3orh" path="res://materials/corridor_floor.tres" id="1_ku3e8"]
+[ext_resource type="Material" uid="uid://oejh78k1dbcd" path="res://materials/corridor_wall.tres" id="2_judyv"]
 [ext_resource type="Script" uid="uid://c3n8h768ibh0e" path="res://scripts/corridor_module.gd" id="3_bfguv"]
+[ext_resource type="PackedScene" uid="uid://b202hpscx4b57" path="res://Assets/bunker_light_clean.glb" id="4_71yxn"]
 
 [sub_resource type="BoxMesh" id="1"]
 material = ExtResource("1_ku3e8")
@@ -36,19 +37,25 @@ size = Vector3(0.15, 1.6, 8)
 script = ExtResource("3_bfguv")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06, 0)
+material_override = ExtResource("1_ku3e8")
 mesh = SubResource("1")
+surface_material_override/0 = ExtResource("2_judyv")
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81755304, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
 mesh = SubResource("2")
+surface_material_override/0 = ExtResource("2_judyv")
 
 [node name="WallLeft" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.425, 0.8, 0)
 mesh = SubResource("3")
+surface_material_override/0 = ExtResource("2_judyv")
 
 [node name="WallRight" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.425, 0.8, 0)
 mesh = SubResource("4")
+surface_material_override/0 = ExtResource("2_judyv")
 
 [node name="Collision" type="StaticBody3D" parent="."]
 
@@ -73,3 +80,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
 [node name="Exit" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Bunker_light" parent="." instance=ExtResource("4_71yxn")]
+transform = Transform3D(3.7701936e-17, 5.6942717e-10, -0.0043423255, -2.3283067e-10, -0.0043423255, -5.6942717e-10, -0.0043423255, 2.3283067e-10, 6.7433723e-25, 1.3399277, 1.0333613, -0.8263537)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Bunker_light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0841145e-21, 0, 12.980498)
+light_color = Color(1.1822883, 1.1327238, 0.8887009, 1)
+light_energy = 0.1
+light_indirect_energy = 0.1
+light_bake_mode = 1
+distance_fade_begin = 0.5
+omni_range = 3.257
+omni_attenuation = 0.175

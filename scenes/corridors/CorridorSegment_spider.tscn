@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://2fg5w8v4tx3y"]
+
+[ext_resource type="Script" uid="uid://c3n8h768ibh0e" path="res://scripts/corridor_module.gd" id="1_liyvh"]
+[ext_resource type="Material" path="res://materials/corridor_floor.tres" id="2_hr43n"]
+[ext_resource type="Material" uid="uid://oejh78k1dbcd" path="res://materials/corridor_wall.tres" id="3_83co5"]
+
+[sub_resource type="BoxMesh" id="1"]
+material = ExtResource("2_hr43n")
+size = Vector3(3, 0.12, 8)
+
+[sub_resource type="BoxMesh" id="2"]
+material = ExtResource("3_83co5")
+size = Vector3(3, 0.1, 8)
+
+[sub_resource type="BoxMesh" id="3"]
+material = ExtResource("3_83co5")
+size = Vector3(0.15, 1.6, 8)
+
+[sub_resource type="BoxMesh" id="4"]
+material = ExtResource("3_83co5")
+size = Vector3(0.15, 1.6, 8)
+
+[sub_resource type="BoxShape3D" id="5"]
+size = Vector3(3, 0.12, 8)
+
+[sub_resource type="BoxShape3D" id="6"]
+size = Vector3(3, 0.1, 8)
+
+[sub_resource type="BoxShape3D" id="7"]
+size = Vector3(0.15, 1.6, 8)
+
+[sub_resource type="BoxShape3D" id="8"]
+size = Vector3(0.15, 1.6, 8)
+
+[node name="CorridorSegment" type="Node3D"]
+script = ExtResource("1_liyvh")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06, 0)
+mesh = SubResource("1")
+
+[node name="Ceiling" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+mesh = SubResource("2")
+
+[node name="WallLeft" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.425, 0.8, 0)
+mesh = SubResource("3")
+
+[node name="WallRight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.425, 0.8, 0)
+mesh = SubResource("4")
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="FloorShape" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06, 0)
+shape = SubResource("5")
+
+[node name="CeilingShape" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+shape = SubResource("6")
+
+[node name="WallLeftShape" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.425, 0.8, 0)
+shape = SubResource("7")
+
+[node name="WallRightShape" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.425, 0.8, 0)
+shape = SubResource("8")
+
+[node name="Entry" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Exit" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
