@@ -7,6 +7,10 @@ extends CharacterBody3D
 
 @onready var _camera: Camera3D = $Camera3D
 
+# --- SOUND ---
+@onready var drive_sound: AudioStreamPlayer3D = $DriveSound
+@onready var bonk_sound: AudioStreamPlayer3D = $BonkSound
+
 var _pitch: float = 0.0
 var _default_gravity: float = float(ProjectSettings.get_setting("physics/3d/default_gravity", 9.8))
 
@@ -40,6 +44,7 @@ func _physics_process(delta: float) -> void:
 	if turning_right:
 		rotation.y -= 2.0 * delta
 
+	# Movement
 	if direction != Vector3.ZERO:
 		velocity.x = move_toward(velocity.x, direction.x * move_speed, acceleration * delta)
 		velocity.z = move_toward(velocity.z, direction.z * move_speed, acceleration * delta)
@@ -52,4 +57,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = 0.0
 
+	# --- DRIVE SOUND: play when moving, stop when idle ---
+	if input_dir.length() > 0:
+		if not drive_sound.playing:
+			drive_sound.play()
+	else:
+		if drive_sound.playing:
+			drive_sound.stop()
+
+	# Apply movement
 	move_and_slide()
+
+	# --- BONK SOUND: play when sliding into walls ---
+	#if get_slide_collision_count() > 0:
+	#	if not bonk_sound.playing:
+	#		bonk_sound.play()
