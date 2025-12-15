@@ -1,6 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 .nomedia
+/android/
+/ios/
+/web/
+/builds/
 
 # Godot-specific ignores
 .import/

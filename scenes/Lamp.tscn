@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://byi2lfkdvjadr"]
+
+[ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="1_light"]
+[ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="2_sprite"]
+
+[node name="Lamp" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 1)
+color = Color(1, 0.901961, 0.701961, 1)
+energy = 0.76
+shadow_enabled = true
+shadow_filter = 1
+texture = ExtResource("1_light")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sprite")
