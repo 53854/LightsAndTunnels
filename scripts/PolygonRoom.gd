@@ -110,13 +110,16 @@ func _update_room():
 	for child_name in ["WallOccluders", "Light_Occlussion", "LightOccluders"]:
 		var old = get_node_or_null(child_name)
 		if old:
-			old.queue_free()
-	
+			old.free()
+
+	# If we are in the editor, we stop here (we just wanted to clean up).
+	# We only generate occluders at runtime to avoid cluttering the editor.
+	if Engine.is_editor_hint():
+		return
+
 	var occluder_parent = Node2D.new()
 	occluder_parent.name = "WallOccluders"
 	add_child(occluder_parent)
-	if Engine.is_editor_hint():
-		occluder_parent.owner = get_tree().edited_scene_root
 
 	for i in range(polygon.size()):
 		var p1 = polygon[i]
@@ -147,5 +150,3 @@ func _update_room():
 		occluder.occluder = occ_poly
 		
 		occluder_parent.add_child(occluder)
-		if Engine.is_editor_hint():
-			occluder.owner = get_tree().edited_scene_root
