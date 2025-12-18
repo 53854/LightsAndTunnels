@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvtyk1yptei6j"]
+[gd_scene load_steps=9 format=3 uid="uid://cvtyk1yptei6j"]
 
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="1_00coo"]
 [ext_resource type="Script" uid="uid://beedbn47vnbfw" path="res://scripts/PolygonRoom.gd" id="2_dnqvi"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b8x6yq4l4y4w" path="res://scenes/Player.tscn" id="5_tgxag"]
 [ext_resource type="PackedScene" uid="uid://c7x6yq4l4y50" path="res://scenes/Debris.tscn" id="6_ngroq"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_216fe"]
+[ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="8_dnqvi"]
 
 [node name="Main" type="Node2D"]
 
@@ -46,9 +47,6 @@ texture_mode = 1
 [node name="ShadowExtruder" type="Node2D" parent="PolygonRoom"]
 visible = false
 script = ExtResource("4_qtn3g")
-
-[node name="Player" parent="." instance=ExtResource("5_tgxag")]
-position = Vector2(96, 48)
 
 [node name="Debris" parent="." instance=ExtResource("6_ngroq")]
 position = Vector2(50, 50)
@@ -312,3 +310,30 @@ energy = 2.0
 shadow_enabled = true
 texture = ExtResource("7_216fe")
 texture_scale = 0.35
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(72.000015, 48)
+rotation = 1.5707964
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("8_dnqvi")
+
+[node name="Arrow2" type="Sprite2D" parent="."]
+position = Vector2(144, -512)
+rotation = 3.1415927
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("8_dnqvi")
+
+[node name="Arrow3" type="Sprite2D" parent="."]
+position = Vector2(640, -376)
+rotation = 4.712389
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("8_dnqvi")
+
+[node name="Arrow4" type="Sprite2D" parent="."]
+position = Vector2(560.00006, 360)
+rotation = 6.2831855
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("8_dnqvi")
+
+[node name="Player" parent="." instance=ExtResource("5_tgxag")]
+position = Vector2(96, 48)
