@@ -21,3 +21,8 @@ mono_crash.*.json
 # MacOS specific ignores
 .DS_Store
 __MACOSX/
+
+# Build specific ignores
+/Builds/
+/builds/
+
