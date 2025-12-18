@@ -46,7 +46,6 @@ texture = ExtResource("3_i178v")
 texture_mode = 1
 
 [node name="ShadowExtruder" type="Node2D" parent="PolygonRoom"]
-visible = false
 script = ExtResource("4_qtn3g")
 
 [node name="Debris" parent="." instance=ExtResource("6_ngroq")]
