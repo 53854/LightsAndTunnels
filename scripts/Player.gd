@@ -1,30 +1,20 @@
 extends CharacterBody2D
 
-@export var speed: float = 150.0
-@export var acceleration: float = 800.0
-@export var friction: float = 1000.0
+@export var speed := 150.0
+@export var acceleration := 800.0
+@export var friction := 1000.0
 
-@export var min_volume_db: float = -12.0
-@export var max_volume_db: float = 0.0
-@export var volume_ramp_time: float = 1.0
-@export var volume_fall_speed: float = 2.0
-@export var move_threshold: float = 5.0
-
-@onready var move_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
-
-var press_time: float = 0.0
-
-func _ready() -> void:
-	move_sound.volume_db = min_volume_db
+@export var push_strength := 70.0
+@export var max_push_impulse := 140.0
 
 func _physics_process(delta: float) -> void:
-	var target_velocity: Vector2 = Vector2.ZERO
-	var pressed: bool = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+	var target_velocity := Vector2.ZERO
 
-	if pressed:
-		var mouse_pos: Vector2 = get_global_mouse_position()
-		var direction: Vector2 = mouse_pos - global_position
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		var mouse_pos := get_global_mouse_position()
+		var direction := mouse_pos - global_position
 		rotation = direction.angle()
+
 		if direction.length() > 5.0:
 			target_velocity = direction.normalized() * speed
 
@@ -35,17 +25,21 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if pressed:
-		press_time += delta
-	else:
-		press_time = maxf(0.0, press_time - delta * volume_fall_speed)
+	for i in range(get_slide_collision_count()):
+		var col := get_slide_collision(i)
+		var rb := col.get_collider() as RigidBody2D
+		if rb == null:
+			continue
 
-	var t: float = clampf(press_time / maxf(volume_ramp_time, 0.001), 0.0, 1.0)
-	move_sound.volume_db = lerpf(min_volume_db, max_volume_db, t)
+		if rb.has_method("make_pushable"):
+			rb.call("make_pushable")
 
-	if velocity.length() > move_threshold:
-		if not move_sound.playing:
-			move_sound.play()
-	else:
-		if move_sound.playing:
-			move_sound.stop()
+		var push_dir := -col.get_normal()
+		push_dir.y = 0
+		push_dir = push_dir.normalized()
+
+		var impulse := push_dir * push_strength
+		if impulse.length() > max_push_impulse:
+			impulse = impulse.normalized() * max_push_impulse
+
+		rb.apply_central_impulse(impulse)

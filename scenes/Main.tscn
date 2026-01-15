@@ -1,14 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnx7dtiuctyo0"]
+[gd_scene load_steps=17 format=3 uid="uid://ddsr1nf4ftao5"]
 
-[ext_resource type="Script" uid="uid://uxroq41poqpw" path="res://scripts/PolygonRoom.gd" id="1_room"]
+[ext_resource type="Script" uid="uid://cr0y7q2ymd3om" path="res://scripts/Main.gd" id="1_q8u5g"]
+[ext_resource type="Script" uid="uid://bwbqjhxhl5n8b" path="res://scripts/PolygonRoom.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="2_floor"]
 [ext_resource type="Texture2D" uid="uid://dmtomufb8r7o7" path="res://assets/wall_concrete.png" id="3_wall"]
-[ext_resource type="Script" uid="uid://jgundudn24if" path="res://scripts/ShadowExtruder.gd" id="4_c01mt"]
-[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="4_player"]
-[ext_resource type="PackedScene" path="res://scenes/Debris.tscn" id="5_debris"]
+[ext_resource type="Script" uid="uid://cmqetilw4w8lp" path="res://scripts/ShadowExtruder.gd" id="4_c01mt"]
+[ext_resource type="PackedScene" uid="uid://b8x6yq4l4y4w" path="res://scenes/Player.tscn" id="4_player"]
+[ext_resource type="PackedScene" uid="uid://c7x6yq4l4y50" path="res://scenes/Debris.tscn" id="5_debris"]
+[ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="7_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_nxtc6"]
+[ext_resource type="Texture2D" uid="uid://ba34i51e6eyvv" path="res://assets/debris_box.png" id="10_lhr70"]
+[ext_resource type="Script" uid="uid://c64kwtp3gd62a" path="res://scenes/rigid_body_2d.gd" id="11_bjd11"]
+[ext_resource type="Texture2D" uid="uid://b8jcssef7i2p4" path="res://assets/bareer.png" id="12_qmy6f"]
+[ext_resource type="Script" uid="uid://d0vjeqnl2l311" path="res://scenes/sprite_2d.gd" id="13_qmy6f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnqvi"]
+size = Vector2(20.11441, 45.89897)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp0k4"]
+size = Vector2(110.5, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwfav"]
+size = Vector2(47, 117.5)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_q8u5g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -20,6 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.08, 1)
@@ -27,8 +44,7 @@ color = Color(0.08, 0.08, 0.08, 1)
 [node name="PolygonRoom" type="Polygon2D" parent="."]
 texture_repeat = 2
 texture = ExtResource("2_floor")
-polygon = PackedVector2Array(207.99994, 296, 124, 236, 24, 295.99997, -8, 184.00003, -16, 40, -8, 6, 312, 0, 368, 24, 368, 104, 312, 136.00003, 320, 168.00003, 392, 176.00003, 456, 168.00003, 480, 96, 456, 32, 488, 8, 608, 8, 632, 16, 640, 96, 624, 136.00003, 624, 168.00003, 616, 208.00003, 616, 271.99997, 672, 303.99997, 712, 279.99997, 720, 224.00003, 688, 200.00003, 672, 160.00003, 656, 112, 672, 32, 728, 8, 784, 8, 896, 16, 952, 32, 1008, 128.00003, 968, 255.99997, 920, 279.99997, 840, 255.99997, 800, 192.00003, 760, 208.00003, 776, 279.99997, 800, 295.99997, 896, 343.99997, 936, 392.00003, 952, 464.00003, 984, 688, 912, 808.0001, 600, 720, 517, 598, 320, 616, 240, 776.0001, 207, 631, 208, 512, 344, 504.00003, 584, 480.00003, 664, 592, 800, 568, 808, 464.00003, 815.99994, 384, 800.00006, 336, 767.99994, 368, 640.00006, 392, 552.00006, 248.00002, 552.00006, 344, 440.00006, 336, 440.00006, 264, 448.00006, 216, 368.00006, 224, 312, 216, 336, 272, 304, 304, 264, 296, 256, 360, 336, 352, 352, 312, 408, 312, 400, 360, 384, 416, 384, 464.00003, 256, 472, 256, 400, 184, 408.00003, 112, 408.00003, 38, 659, 128.00006, 808, 952.00006, 872.00006, 976.00006, 992.00006, 64.00006, 984.0001, 32.00006, 824.00006, -8, 744, 8.000122, 320.00003, 54, 361, 111.99997, 368, 200, 368)
-uv = PackedVector2Array(207.99994, 296, 24, 295.99997, -8, 184.00003, -16, 40, 136, 8, 312, 0, 368, 24, 368, 104, 312, 136.00003, 320, 168.00003, 392, 176.00003, 456, 168.00003, 480, 96, 456, 32, 488, 8, 608, 8, 632, 16, 640, 96, 624, 136.00003, 624, 168.00003, 616, 208.00003, 616, 271.99997, 672, 303.99997, 712, 279.99997, 720, 224.00003, 688, 200.00003, 672, 160.00003, 656, 112, 672, 32, 728, 8, 784, 8, 896, 16, 952, 32, 1008, 128.00003, 968, 255.99997, 920, 279.99997, 840, 255.99997, 800, 192.00003, 760, 208.00003, 776, 279.99997, 800, 295.99997, 896, 343.99997, 936, 392.00003, 952, 464.00003, 984, 688, 912, 808.0001, 600, 720, 536, 560, 320, 616, 240, 776.0001, 168, 664, 208, 512, 344, 504.00003, 584, 480.00003, 664, 592, 800, 568, 808, 464.00003, 815.99994, 384, 800.00006, 336, 767.99994, 368, 640.00006, 392, 552.00006, 248.00002, 552.00006, 344, 440.00006, 336, 440.00006, 264, 448.00006, 216, 368.00006, 224, 312, 216, 336, 272, 304, 304, 264, 296, 256, 360, 336, 352, 352, 312, 408, 312, 400, 360, 384, 416, 384, 464.00003, 256, 472, 256, 400, 184, 408.00003, 112, 408.00003, 104, 656, 128.00006, 808, 952.00006, 872.00006, 976.00006, 992.00006, 64.00006, 984.0001, 32.00006, 824.00006, -8, 744, 8.000122, 320.00003, 119.99997, 320, 111.99997, 368, 200, 368)
+polygon = PackedVector2Array(-4, -4, -2.986206, 61.903564, -312, 64, -312, -192, -376, -192, -368, -840, -256, -840, -256, -1024, 0, -1032, 0, -952, 72, -952, 80, -840, -48, -832, -48, -640, 312, -648, 312, -832, 192, -832, 192, -968, 264, -968, 264, -1280, 0, -1280, 0, -1168, -264, -1160, -264, -1224, -624, -1216, -632, -840, -520, -840, -512, -192, -568, -192, -568, 264, -312, 264, -312, 192, -8, 192, 0, 256, 256, 256, 248, 0, 131, -8, 136, -320, 256, -320, 256, -440, 512, -440, 512, -320, 584, -320, 584, -64, 584, 256, 512, 256, 512, 320, 272, 320, 0, 320, 0, 568, 63.61609, 567.99994, 64, 704, 0, 704, 0, 763.87964, -120, 768, -120, 696, -192, 696, -192, 584, -128, 584, -128, 392, -384, 392, -384, 584, -312, 584, -312, 696, -384, 696, -384, 766.9576, -512, 776, -512, 712, -768, 712, -768, 960, -512, 960, -512, 896, -384, 892.7976, -384, 960, -319.1195, 960, -312, 1088, -384, 1088, -376, 1280, -316.63086, 1280, -320, 1408, -384, 1408, -384, 1474.7991, -512, 1472, -512, 1416, -760, 1416, -760, 1672, -705.01373, 1672, -704, 1800, -768, 1800, -767.99994, 1856.4171, -896, 1856, -896, 1792, -1152, 1792, -1152, 2048, -896, 2048, -896, 1984, -767.99994, 1984.6771, -768, 2048, -512, 2048, -512, 1800, -576, 1800, -574.70886, 1672, -512, 1672, -512, 1608, -384, 1601.4656, -384, 1672, -128, 1672, -125.191895, 1601.7961, 0, 1600, 0, 1680, 256, 1680, 255.99994, 1601.2373, 384, 1600, 384, 1672, 452.2912, 1671.9999, 456, 1792, 392, 1800, 391.99988, 1865.1824, 256, 1856, 256, 1792, 0, 1792, 0, 1856, -128, 1864, -128, 1792, -376, 1792, -376, 2056, -321.13165, 2056, -320, 2176, -384, 2176, -384, 2240.9795, -504, 2240, -504, 2176, -704, 2176, -704, 2432, -640.4518, 2432, -640, 2560, -704, 2560, -704, 2624, -832, 2624, -832, 2496, -1080, 2496, -1080, 2760, -832, 2760, -832, 2696, -704, 2696, -704, 2752, -512, 2752, -512, 2560, -576, 2560, -574.4209, 2432, -504, 2432, -504, 2368, -384, 2366.7603, -384, 2432, -319.5703, 2432, -320, 2560, -384, 2560, -384, 2752, -128, 2752, -128, 2560, -192, 2560, -190.72949, 2432, -128, 2432, -128, 2176, -192, 2176, -186.70068, 2056, -128, 2056, -128, 1984, 0, 1985.7915, 0, 2048, 264, 2048, 264, 1984, 391.99988, 1979.3071, 392, 2040, 451.13757, 2040, 448, 2176, 384, 2176, 384, 2242, 256, 2240, 256, 2176, 64, 2176, 64, 2432, 256, 2432, 256, 2368, 384, 2365.2405, 384, 2432, 640, 2432, 640, 2366.057, 768, 2368, 768, 2432, 1024, 2432, 1024, 2184, 768, 2184, 768, 2240, 640, 2237.3567, 640, 2176, 576, 2176, 576.53754, 2040, 640, 2040, 642.525, 1981.9235, 768, 1984, 768, 2056, 1024, 2048, 1024, 1800, 768, 1800, 768, 1856, 648, 1856, 640, 1800, 576, 1792, 576.3005, 1671.9999, 640, 1672, 640, 1601.3224, 768, 1600, 768, 1664, 1032, 1664, 1032, 1440, 768, 1440, 768, 1480, 640, 1474.8761, 640, 1416, 384, 1416, 384, 1480, 255.99994, 1477.8173, 256, 1408, 0, 1408, 0, 1472, -120, 1472, -128, 1408, -184, 1408, -190.71826, 1280, -128, 1280, -120, 1088, -192, 1088, -192, 968, -120, 960, -120, 896, 0, 895.94147, 0, 960, 256, 960, 256.00006, 898.2782, 384, 896, 384, 1024, 450.77698, 1024, 448, 1144, 384, 1152, 386.18958, 1215.4962, 256, 1216, 256, 1152, 0, 1152, 0, 1344, 264, 1344, 390.6101, 1343.6904, 392, 1384, 640, 1384, 639.99994, 1342.6316, 768, 1344, 768, 1416, 1032, 1408, 1032, 1152, 768, 1144, 768, 1216, 639.99994, 1218.6223, 640, 1152, 576, 1144, 575.495, 1024, 640, 1024, 640.00006, 959.438, 776, 960, 1024, 960, 1024, 776, 768, 768, 776, 832, 640.00006, 833.5254, 640, 768, 384, 768, 256.00006, 770.5022, 256, 704, 192, 704, 194.29608, 567.99994, 264, 568, 264, 448, 511.99988, 450.13922, 512, 512, 776, 512, 776, 252.0716, 704, 248, 696, -72, 704, -320, 760, -320, 760, -584, 512, -584, 261, -581, -122, -587, -120, -320, 0, -320)
 script = ExtResource("1_room")
 texture_wall = ExtResource("3_wall")
 
@@ -36,64 +52,575 @@ texture_wall = ExtResource("3_wall")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PolygonRoom/WallCollision"]
 build_mode = 1
-polygon = PackedVector2Array(207.99994, 296, 124, 236, 24, 295.99997, -8, 184.00003, -16, 40, -8, 6, 312, 0, 368, 24, 368, 104, 312, 136.00003, 320, 168.00003, 392, 176.00003, 456, 168.00003, 480, 96, 456, 32, 488, 8, 608, 8, 632, 16, 640, 96, 624, 136.00003, 624, 168.00003, 616, 208.00003, 616, 271.99997, 672, 303.99997, 712, 279.99997, 720, 224.00003, 688, 200.00003, 672, 160.00003, 656, 112, 672, 32, 728, 8, 784, 8, 896, 16, 952, 32, 1008, 128.00003, 968, 255.99997, 920, 279.99997, 840, 255.99997, 800, 192.00003, 760, 208.00003, 776, 279.99997, 800, 295.99997, 896, 343.99997, 936, 392.00003, 952, 464.00003, 984, 688, 912, 808.0001, 600, 720, 517, 598, 320, 616, 240, 776.0001, 207, 631, 208, 512, 344, 504.00003, 584, 480.00003, 664, 592, 800, 568, 808, 464.00003, 815.99994, 384, 800.00006, 336, 767.99994, 368, 640.00006, 392, 552.00006, 248.00002, 552.00006, 344, 440.00006, 336, 440.00006, 264, 448.00006, 216, 368.00006, 224, 312, 216, 336, 272, 304, 304, 264, 296, 256, 360, 336, 352, 352, 312, 408, 312, 400, 360, 384, 416, 384, 464.00003, 256, 472, 256, 400, 184, 408.00003, 112, 408.00003, 38, 659, 128.00006, 808, 952.00006, 872.00006, 976.00006, 992.00006, 64.00006, 984.0001, 32.00006, 824.00006, -8, 744, 8.000122, 320.00003, 54, 361, 111.99997, 368, 200, 368)
+polygon = PackedVector2Array(-4, -4, -2.986206, 61.903564, -312, 64, -312, -192, -376, -192, -368, -840, -256, -840, -256, -1024, 0, -1032, 0, -952, 72, -952, 80, -840, -48, -832, -48, -640, 312, -648, 312, -832, 192, -832, 192, -968, 264, -968, 264, -1280, 0, -1280, 0, -1168, -264, -1160, -264, -1224, -624, -1216, -632, -840, -520, -840, -512, -192, -568, -192, -568, 264, -312, 264, -312, 192, -8, 192, 0, 256, 256, 256, 248, 0, 131, -8, 136, -320, 256, -320, 256, -440, 512, -440, 512, -320, 584, -320, 584, -64, 584, 256, 512, 256, 512, 320, 272, 320, 0, 320, 0, 568, 63.61609, 567.99994, 64, 704, 0, 704, 0, 763.87964, -120, 768, -120, 696, -192, 696, -192, 584, -128, 584, -128, 392, -384, 392, -384, 584, -312, 584, -312, 696, -384, 696, -384, 766.9576, -512, 776, -512, 712, -768, 712, -768, 960, -512, 960, -512, 896, -384, 892.7976, -384, 960, -319.1195, 960, -312, 1088, -384, 1088, -376, 1280, -316.63086, 1280, -320, 1408, -384, 1408, -384, 1474.7991, -512, 1472, -512, 1416, -760, 1416, -760, 1672, -705.01373, 1672, -704, 1800, -768, 1800, -767.99994, 1856.4171, -896, 1856, -896, 1792, -1152, 1792, -1152, 2048, -896, 2048, -896, 1984, -767.99994, 1984.6771, -768, 2048, -512, 2048, -512, 1800, -576, 1800, -574.70886, 1672, -512, 1672, -512, 1608, -384, 1601.4656, -384, 1672, -128, 1672, -125.191895, 1601.7961, 0, 1600, 0, 1680, 256, 1680, 255.99994, 1601.2373, 384, 1600, 384, 1672, 452.2912, 1671.9999, 456, 1792, 392, 1800, 391.99988, 1865.1824, 256, 1856, 256, 1792, 0, 1792, 0, 1856, -128, 1864, -128, 1792, -376, 1792, -376, 2056, -321.13165, 2056, -320, 2176, -384, 2176, -384, 2240.9795, -504, 2240, -504, 2176, -704, 2176, -704, 2432, -640.4518, 2432, -640, 2560, -704, 2560, -704, 2624, -832, 2624, -832, 2496, -1080, 2496, -1080, 2760, -832, 2760, -832, 2696, -704, 2696, -704, 2752, -512, 2752, -512, 2560, -576, 2560, -574.4209, 2432, -504, 2432, -504, 2368, -384, 2366.7603, -384, 2432, -319.5703, 2432, -320, 2560, -384, 2560, -384, 2752, -128, 2752, -128, 2560, -192, 2560, -190.72949, 2432, -128, 2432, -128, 2176, -192, 2176, -186.70068, 2056, -128, 2056, -128, 1984, 0, 1985.7915, 0, 2048, 264, 2048, 264, 1984, 391.99988, 1979.3071, 392, 2040, 451.13757, 2040, 448, 2176, 384, 2176, 384, 2242, 256, 2240, 256, 2176, 64, 2176, 64, 2432, 256, 2432, 256, 2368, 384, 2365.2405, 384, 2432, 640, 2432, 640, 2366.057, 768, 2368, 768, 2432, 1024, 2432, 1024, 2184, 768, 2184, 768, 2240, 640, 2237.3567, 640, 2176, 576, 2176, 576.53754, 2040, 640, 2040, 642.525, 1981.9235, 768, 1984, 768, 2056, 1024, 2048, 1024, 1800, 768, 1800, 768, 1856, 648, 1856, 640, 1800, 576, 1792, 576.3005, 1671.9999, 640, 1672, 640, 1601.3224, 768, 1600, 768, 1664, 1032, 1664, 1032, 1440, 768, 1440, 768, 1480, 640, 1474.8761, 640, 1416, 384, 1416, 384, 1480, 255.99994, 1477.8173, 256, 1408, 0, 1408, 0, 1472, -120, 1472, -128, 1408, -184, 1408, -190.71826, 1280, -128, 1280, -120, 1088, -192, 1088, -192, 968, -120, 960, -120, 896, 0, 895.94147, 0, 960, 256, 960, 256.00006, 898.2782, 384, 896, 384, 1024, 450.77698, 1024, 448, 1144, 384, 1152, 386.18958, 1215.4962, 256, 1216, 256, 1152, 0, 1152, 0, 1344, 264, 1344, 390.6101, 1343.6904, 392, 1384, 640, 1384, 639.99994, 1342.6316, 768, 1344, 768, 1416, 1032, 1408, 1032, 1152, 768, 1144, 768, 1216, 639.99994, 1218.6223, 640, 1152, 576, 1144, 575.495, 1024, 640, 1024, 640.00006, 959.438, 776, 960, 1024, 960, 1024, 776, 768, 768, 776, 832, 640.00006, 833.5254, 640, 768, 384, 768, 256.00006, 770.5022, 256, 704, 192, 704, 194.29608, 567.99994, 264, 568, 264, 448, 511.99988, 450.13922, 512, 512, 776, 512, 776, 252.0716, 704, 248, 696, -72, 704, -320, 760, -320, 760, -584, 512, -584, 261, -581, -122, -587, -120, -320, 0, -320)
 
 [node name="WallVisuals" type="Line2D" parent="PolygonRoom"]
-points = PackedVector2Array(207.99994, 296, 124, 236, 24, 295.99997, -8, 184.00003, -16, 40, -8, 6, 312, 0, 368, 24, 368, 104, 312, 136.00003, 320, 168.00003, 392, 176.00003, 456, 168.00003, 480, 96, 456, 32, 488, 8, 608, 8, 632, 16, 640, 96, 624, 136.00003, 624, 168.00003, 616, 208.00003, 616, 271.99997, 672, 303.99997, 712, 279.99997, 720, 224.00003, 688, 200.00003, 672, 160.00003, 656, 112, 672, 32, 728, 8, 784, 8, 896, 16, 952, 32, 1008, 128.00003, 968, 255.99997, 920, 279.99997, 840, 255.99997, 800, 192.00003, 760, 208.00003, 776, 279.99997, 800, 295.99997, 896, 343.99997, 936, 392.00003, 952, 464.00003, 984, 688, 912, 808.0001, 600, 720, 517, 598, 320, 616, 240, 776.0001, 207, 631, 208, 512, 344, 504.00003, 584, 480.00003, 664, 592, 800, 568, 808, 464.00003, 815.99994, 384, 800.00006, 336, 767.99994, 368, 640.00006, 392, 552.00006, 248.00002, 552.00006, 344, 440.00006, 336, 440.00006, 264, 448.00006, 216, 368.00006, 224, 312, 216, 336, 272, 304, 304, 264, 296, 256, 360, 336, 352, 352, 312, 408, 312, 400, 360, 384, 416, 384, 464.00003, 256, 472, 256, 400, 184, 408.00003, 112, 408.00003, 38, 659, 128.00006, 808, 952.00006, 872.00006, 976.00006, 992.00006, 64.00006, 984.0001, 32.00006, 824.00006, -8, 744, 8.000122, 320.00003, 54, 361, 111.99997, 368, 200, 368, 207.99994, 296)
+points = PackedVector2Array(-4, -4, -2.986206, 61.903564, -312, 64, -312, -192, -376, -192, -368, -840, -256, -840, -256, -1024, 0, -1032, 0, -952, 72, -952, 80, -840, -48, -832, -48, -640, 312, -648, 312, -832, 192, -832, 192, -968, 264, -968, 264, -1280, 0, -1280, 0, -1168, -264, -1160, -264, -1224, -624, -1216, -632, -840, -520, -840, -512, -192, -568, -192, -568, 264, -312, 264, -312, 192, -8, 192, 0, 256, 256, 256, 248, 0, 131, -8, 136, -320, 256, -320, 256, -440, 512, -440, 512, -320, 584, -320, 584, -64, 584, 256, 512, 256, 512, 320, 272, 320, 0, 320, 0, 568, 63.61609, 567.99994, 64, 704, 0, 704, 0, 763.87964, -120, 768, -120, 696, -192, 696, -192, 584, -128, 584, -128, 392, -384, 392, -384, 584, -312, 584, -312, 696, -384, 696, -384, 766.9576, -512, 776, -512, 712, -768, 712, -768, 960, -512, 960, -512, 896, -384, 892.7976, -384, 960, -319.1195, 960, -312, 1088, -384, 1088, -376, 1280, -316.63086, 1280, -320, 1408, -384, 1408, -384, 1474.7991, -512, 1472, -512, 1416, -760, 1416, -760, 1672, -705.01373, 1672, -704, 1800, -768, 1800, -767.99994, 1856.4171, -896, 1856, -896, 1792, -1152, 1792, -1152, 2048, -896, 2048, -896, 1984, -767.99994, 1984.6771, -768, 2048, -512, 2048, -512, 1800, -576, 1800, -574.70886, 1672, -512, 1672, -512, 1608, -384, 1601.4656, -384, 1672, -128, 1672, -125.191895, 1601.7961, 0, 1600, 0, 1680, 256, 1680, 255.99994, 1601.2373, 384, 1600, 384, 1672, 452.2912, 1671.9999, 456, 1792, 392, 1800, 391.99988, 1865.1824, 256, 1856, 256, 1792, 0, 1792, 0, 1856, -128, 1864, -128, 1792, -376, 1792, -376, 2056, -321.13165, 2056, -320, 2176, -384, 2176, -384, 2240.9795, -504, 2240, -504, 2176, -704, 2176, -704, 2432, -640.4518, 2432, -640, 2560, -704, 2560, -704, 2624, -832, 2624, -832, 2496, -1080, 2496, -1080, 2760, -832, 2760, -832, 2696, -704, 2696, -704, 2752, -512, 2752, -512, 2560, -576, 2560, -574.4209, 2432, -504, 2432, -504, 2368, -384, 2366.7603, -384, 2432, -319.5703, 2432, -320, 2560, -384, 2560, -384, 2752, -128, 2752, -128, 2560, -192, 2560, -190.72949, 2432, -128, 2432, -128, 2176, -192, 2176, -186.70068, 2056, -128, 2056, -128, 1984, 0, 1985.7915, 0, 2048, 264, 2048, 264, 1984, 391.99988, 1979.3071, 392, 2040, 451.13757, 2040, 448, 2176, 384, 2176, 384, 2242, 256, 2240, 256, 2176, 64, 2176, 64, 2432, 256, 2432, 256, 2368, 384, 2365.2405, 384, 2432, 640, 2432, 640, 2366.057, 768, 2368, 768, 2432, 1024, 2432, 1024, 2184, 768, 2184, 768, 2240, 640, 2237.3567, 640, 2176, 576, 2176, 576.53754, 2040, 640, 2040, 642.525, 1981.9235, 768, 1984, 768, 2056, 1024, 2048, 1024, 1800, 768, 1800, 768, 1856, 648, 1856, 640, 1800, 576, 1792, 576.3005, 1671.9999, 640, 1672, 640, 1601.3224, 768, 1600, 768, 1664, 1032, 1664, 1032, 1440, 768, 1440, 768, 1480, 640, 1474.8761, 640, 1416, 384, 1416, 384, 1480, 255.99994, 1477.8173, 256, 1408, 0, 1408, 0, 1472, -120, 1472, -128, 1408, -184, 1408, -190.71826, 1280, -128, 1280, -120, 1088, -192, 1088, -192, 968, -120, 960, -120, 896, 0, 895.94147, 0, 960, 256, 960, 256.00006, 898.2782, 384, 896, 384, 1024, 450.77698, 1024, 448, 1144, 384, 1152, 386.18958, 1215.4962, 256, 1216, 256, 1152, 0, 1152, 0, 1344, 264, 1344, 390.6101, 1343.6904, 392, 1384, 640, 1384, 639.99994, 1342.6316, 768, 1344, 768, 1416, 1032, 1408, 1032, 1152, 768, 1144, 768, 1216, 639.99994, 1218.6223, 640, 1152, 576, 1144, 575.495, 1024, 640, 1024, 640.00006, 959.438, 776, 960, 1024, 960, 1024, 776, 768, 768, 776, 832, 640.00006, 833.5254, 640, 768, 384, 768, 256.00006, 770.5022, 256, 704, 192, 704, 194.29608, 567.99994, 264, 568, 264, 448, 511.99988, 450.13922, 512, 512, 776, 512, 776, 252.0716, 704, 248, 696, -72, 704, -320, 760, -320, 760, -584, 512, -584, 261, -581, -122, -587, -120, -320, 0, -320, -4, -4)
 width = 16.0
 texture = ExtResource("3_wall")
 texture_mode = 1
 
 [node name="ShadowExtruder" type="Node2D" parent="PolygonRoom"]
+visible = false
 script = ExtResource("4_c01mt")
 
 [node name="Debris" parent="." instance=ExtResource("5_debris")]
 position = Vector2(50, 50)
 rotation = 0.5
 
-[node name="Debris2" parent="." instance=ExtResource("5_debris")]
-position = Vector2(150, 80)
-rotation = 2.1
-
-[node name="Debris3" parent="." instance=ExtResource("5_debris")]
-position = Vector2(80, 200)
-
-[node name="Debris4" parent="." instance=ExtResource("5_debris")]
-position = Vector2(194.99995, 233.99997)
-rotation = 1.0
-
-[node name="Debris5" parent="." instance=ExtResource("5_debris")]
-position = Vector2(280, 180)
-
-[node name="lamp2" type="PointLight2D" parent="."]
-position = Vector2(802, 145)
-color = Color(0.91514367, 0.776603, 0, 1)
+[node name="greenlamp" type="PointLight2D" parent="."]
+position = Vector2(132, -885)
+color = Color(0, 1, 0, 1)
+energy = 1.5
 shadow_enabled = true
 texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
 
-[node name="lamp3" type="PointLight2D" parent="."]
-position = Vector2(835, 692)
-color = Color(0.91514367, 0.776603, 0, 1)
+[node name="greenlamp5" type="PointLight2D" parent="."]
+position = Vector2(136, -744)
+color = Color(0, 1, 0, 1)
+energy = 1.5
 shadow_enabled = true
 texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
 
-[node name="lamp4" type="PointLight2D" parent="."]
-position = Vector2(210, 690)
-color = Color(0.91514367, 0.776603, 0, 1)
+[node name="greenlamp2" type="PointLight2D" parent="."]
+position = Vector2(-648, 1928)
+color = Color(0, 1, 0, 1)
+energy = 1.5
 shadow_enabled = true
 texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
 
-[node name="lamp" type="PointLight2D" parent="."]
-position = Vector2(533, 182)
-color = Color(0.91514367, 0.776603, 0, 1)
+[node name="greenlamp6" type="PointLight2D" parent="."]
+position = Vector2(-256, 2672)
+color = Color(0, 1, 0, 1)
+energy = 1.5
 shadow_enabled = true
 texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
 
-[node name="lamp5" type="PointLight2D" parent="."]
-position = Vector2(774, 925)
-color = Color(0.91514367, 0.776603, 0, 1)
+[node name="greenlamp3" type="PointLight2D" parent="."]
+position = Vector2(520, 1264)
+color = Color(0, 1, 0, 1)
+energy = 1.5
 shadow_enabled = true
 texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="greenlamp4" type="PointLight2D" parent="."]
+position = Vector2(520, 2264)
+color = Color(0, 1, 0, 1)
+energy = 1.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="whitelamp" type="PointLight2D" parent="."]
+position = Vector2(100, -192)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp2" type="PointLight2D" parent="."]
+position = Vector2(384, -496)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp10" type="PointLight2D" parent="."]
+position = Vector2(-168, 128)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp3" type="PointLight2D" parent="."]
+position = Vector2(640, -160)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp5" type="PointLight2D" parent="."]
+position = Vector2(136, -896)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp6" type="PointLight2D" parent="."]
+position = Vector2(-128, -1082)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp7" type="PointLight2D" parent="."]
+position = Vector2(-440, -720)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp9" type="PointLight2D" parent="."]
+position = Vector2(-448, -512)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp8" type="PointLight2D" parent="."]
+position = Vector2(-448, -320)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="whitelamp4" type="PointLight2D" parent="."]
+position = Vector2(376, 384)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.2
+
+[node name="finishlamp" type="PointLight2D" parent="."]
+position = Vector2(-976, 2640)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.4
+
+[node name="redlamp" type="PointLight2D" parent="."]
+position = Vector2(72, -480)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp9" type="PointLight2D" parent="."]
+position = Vector2(-448, 56)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.4
+
+[node name="redlamp2" type="PointLight2D" parent="."]
+position = Vector2(-256, 1544)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp3" type="PointLight2D" parent="."]
+position = Vector2(136, 1552)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp4" type="PointLight2D" parent="."]
+position = Vector2(-640, 1560)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp5" type="PointLight2D" parent="."]
+position = Vector2(-640, 832)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp6" type="PointLight2D" parent="."]
+position = Vector2(128, 1248)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp7" type="PointLight2D" parent="."]
+position = Vector2(160, 2320)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="redlamp8" type="PointLight2D" parent="."]
+position = Vector2(-1024, 1928)
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="yellowlamp" type="PointLight2D" parent="."]
+position = Vector2(640, -464)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp8" type="PointLight2D" parent="."]
+position = Vector2(-448, -1024)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.4
+
+[node name="yellowlamp2" type="PointLight2D" parent="."]
+position = Vector2(136, 432)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp3" type="PointLight2D" parent="."]
+position = Vector2(-256, 832)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp4" type="PointLight2D" parent="."]
+position = Vector2(-248, 1184)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp6" type="PointLight2D" parent="."]
+position = Vector2(512, 1552)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp7" type="PointLight2D" parent="."]
+position = Vector2(-248, 1928)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp9" type="PointLight2D" parent="."]
+position = Vector2(-600, 2312)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="yellowlamp5" type="PointLight2D" parent="."]
+position = Vector2(-256, 504)
+color = Color(0.9882353, 1, 0, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.3
+
+[node name="bluelamp" type="PointLight2D" parent="."]
+position = Vector2(640, 360)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp11" type="PointLight2D" parent="."]
+position = Vector2(136, -1104)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp2" type="PointLight2D" parent="."]
+position = Vector2(128, 832)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp3" type="PointLight2D" parent="."]
+position = Vector2(520, 896)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp4" type="PointLight2D" parent="."]
+position = Vector2(888, 880)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp5" type="PointLight2D" parent="."]
+position = Vector2(896, 1280)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp6" type="PointLight2D" parent="."]
+position = Vector2(504, 1928)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp7" type="PointLight2D" parent="."]
+position = Vector2(896, 1928)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp8" type="PointLight2D" parent="."]
+position = Vector2(128, 1920)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp13" type="PointLight2D" parent="."]
+position = Vector2(-256, 2304)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp12" type="PointLight2D" parent="."]
+position = Vector2(-608, 2656)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp10" type="PointLight2D" parent="."]
+position = Vector2(896, 2312)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="bluelamp9" type="PointLight2D" parent="."]
+position = Vector2(896, 1544)
+color = Color(0.046002887, 0.2838374, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("7_nxtc6")
+texture_scale = 0.35
+
+[node name="upArrow" type="Sprite2D" parent="."]
+position = Vector2(72.000015, 48)
+rotation = 1.5707964
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="upArrow2" type="Sprite2D" parent="."]
+position = Vector2(136, -760)
+rotation = 1.5707964
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="rightArrow" type="Sprite2D" parent="."]
+position = Vector2(144, -512)
+rotation = 3.1415927
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="rightArrow2" type="Sprite2D" parent="."]
+position = Vector2(-376, 119.99994)
+rotation = 3.1415927
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="downArrow" type="Sprite2D" parent="."]
+position = Vector2(640, -376)
+rotation = 4.712389
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="downArrow2" type="Sprite2D" parent="."]
+position = Vector2(-447.99988, -912)
+rotation = 4.712389
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="leftArrow" type="Sprite2D" parent="."]
+position = Vector2(576, 360)
+rotation = 6.2831855
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
+
+[node name="leftArrow2" type="Sprite2D" parent="."]
+position = Vector2(96, -1111.9999)
+rotation = 6.2831855
+scale = Vector2(0.33607426, 0.30458042)
+texture = ExtResource("7_jlsqs")
 
 [node name="Player" parent="." instance=ExtResource("4_player")]
-position = Vector2(176, 151)
+position = Vector2(238, -740)
+
+[node name="WinLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="WinLayer"]
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "Good job you found the exit"
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ResetButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+text = "Reset"
+
+[node name="QuitButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -110.0
+offset_top = 10.0
+offset_right = -70.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="QuitDialog" type="Panel" parent="HUD"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HUD/QuitDialog"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "Close?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/QuitDialog"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -50.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="HUD/QuitDialog/HBoxContainer"]
+layout_mode = 2
+text = "Close Application"
+
+[node name="CancelButton" type="Button" parent="HUD/QuitDialog/HBoxContainer"]
+layout_mode = 2
+text = "Close Menu"
+
+[node name="Final Room" type="Area2D" parent="."]
+position = Vector2(-962.9999, 2643)
+rotation = 3.1415927
+scale = Vector2(13.692933, 6.002226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room"]
+position = Vector2(0.10971451, 0.93167114)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_dnqvi")
+
+[node name="Final Room" type="Area2D" parent="Final Room"]
+position = Vector2(-255, 2308.0002)
+scale = Vector2(-13.692933, -6.002226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room/Final Room"]
+position = Vector2(0.10971451, 0.93167114)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_dnqvi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(395.17188, -532)
+scale = Vector2(0.13442992, 0.14453126)
+texture = ExtResource("10_lhr70")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(396.75, -535.5)
+shape = SubResource("RectangleShape2D_wp0k4")
+
+[node name="Bareer" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+script = ExtResource("11_bjd11")
+
+[node name="bareer_png" type="Sprite2D" parent="Bareer"]
+position = Vector2(-139, -1096)
+rotation = 4.728097
+scale = Vector2(0.13808087, 0.1657418)
+texture = ExtResource("12_qmy6f")
+script = ExtResource("13_qmy6f")
+
+[node name="RectangleShape2D" type="CollisionShape2D" parent="Bareer"]
+position = Vector2(-138, -1094.25)
+shape = SubResource("RectangleShape2D_mwfav")
+
+[connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="HUD/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/ConfirmButton" to="." method="_on_confirm_quit_pressed"]
+[connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/CancelButton" to="." method="_on_cancel_quit_pressed"]
+[connection signal="body_entered" from="Final Room" to="." method="_on_final_room_body_entered"]
