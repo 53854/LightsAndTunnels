@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://0xxj70jidogj"]
+[gd_scene load_steps=11 format=3 uid="uid://ddsr1nf4ftao5"]
 
-[ext_resource type="Script" uid="uid://beedbn47vnbfw" path="res://scripts/PolygonRoom.gd" id="1_room"]
+[ext_resource type="Script" uid="uid://cxxfn3rfo4l7x" path="res://scripts/Main.gd" id="1_q8u5g"]
+[ext_resource type="Script" uid="uid://dkmwh6fquqomv" path="res://scripts/PolygonRoom.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="2_floor"]
 [ext_resource type="Texture2D" uid="uid://dmtomufb8r7o7" path="res://assets/wall_concrete.png" id="3_wall"]
 [ext_resource type="Script" uid="uid://dneg2i4v7ocvd" path="res://scripts/ShadowExtruder.gd" id="4_c01mt"]
@@ -13,6 +14,7 @@
 size = Vector2(20.11441, 45.89897)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_q8u5g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -24,6 +26,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.08, 1)
@@ -468,4 +471,118 @@ scale = Vector2(0.33607426, 0.30458042)
 texture = ExtResource("7_jlsqs")
 
 [node name="Player" parent="." instance=ExtResource("4_player")]
-position = Vector2(136, -736)
+position = Vector2(238, -740)
+
+[node name="WinLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="WinLayer"]
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "Good job you found the exit"
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ResetButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+text = "Reset"
+
+[node name="QuitButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -110.0
+offset_top = 10.0
+offset_right = -70.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="QuitDialog" type="Panel" parent="HUD"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HUD/QuitDialog"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "Close?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/QuitDialog"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -50.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="HUD/QuitDialog/HBoxContainer"]
+layout_mode = 2
+text = "Close Application"
+
+[node name="CancelButton" type="Button" parent="HUD/QuitDialog/HBoxContainer"]
+layout_mode = 2
+text = "Close Menu"
+
+[node name="Final Room" type="Area2D" parent="."]
+position = Vector2(-962.9999, 2643)
+rotation = 3.1415927
+scale = Vector2(13.692933, 6.002226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room"]
+position = Vector2(0.10971451, 0.93167114)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_dnqvi")
+
+[node name="Final Room" type="Area2D" parent="Final Room"]
+position = Vector2(-255, 2308.0002)
+scale = Vector2(-13.692933, -6.002226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room/Final Room"]
+position = Vector2(0.10971451, 0.93167114)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_dnqvi")
+
+[connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="HUD/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/ConfirmButton" to="." method="_on_confirm_quit_pressed"]
+[connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/CancelButton" to="." method="_on_cancel_quit_pressed"]
+[connection signal="body_entered" from="Final Room" to="." method="_on_final_room_body_entered"]
