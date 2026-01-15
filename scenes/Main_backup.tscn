@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvtyk1yptei6j"]
+[gd_scene load_steps=10 format=3 uid="uid://cvtyk1yptei6j"]
 
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="1_00coo"]
-[ext_resource type="Script" uid="uid://beedbn47vnbfw" path="res://scripts/PolygonRoom.gd" id="2_dnqvi"]
+[ext_resource type="Script" uid="uid://dkmwh6fquqomv" path="res://scripts/PolygonRoom.gd" id="2_dnqvi"]
 [ext_resource type="Texture2D" uid="uid://dmtomufb8r7o7" path="res://assets/wall_concrete.png" id="3_i178v"]
 [ext_resource type="Script" uid="uid://dneg2i4v7ocvd" path="res://scripts/ShadowExtruder.gd" id="4_qtn3g"]
 [ext_resource type="PackedScene" uid="uid://b8x6yq4l4y4w" path="res://scenes/Player.tscn" id="5_tgxag"]
 [ext_resource type="PackedScene" uid="uid://c7x6yq4l4y50" path="res://scenes/Debris.tscn" id="6_ngroq"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_216fe"]
 [ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="8_dnqvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnqvi"]
+size = Vector2(20.11441, 45.89897)
 
 [node name="Main" type="Node2D"]
 
@@ -337,3 +340,12 @@ texture = ExtResource("8_dnqvi")
 
 [node name="Player" parent="." instance=ExtResource("5_tgxag")]
 position = Vector2(96, 48)
+
+[node name="Final Room" type="Area2D" parent="."]
+position = Vector2(-255, 2308.0002)
+scale = Vector2(-13.692933, -6.002226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room"]
+position = Vector2(0.10971451, 0.93167114)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_dnqvi")
