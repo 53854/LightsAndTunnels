@@ -5,6 +5,8 @@
 /ios/
 /web/
 /builds/
+Builds/
+Builds/*
 
 # Godot-specific ignores
 .import/
