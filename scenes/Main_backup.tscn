@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvtyk1yptei6j"]
+[gd_scene load_steps=11 format=3 uid="uid://cvtyk1yptei6j"]
 
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="1_00coo"]
 [ext_resource type="Script" uid="uid://dkmwh6fquqomv" path="res://scripts/PolygonRoom.gd" id="2_dnqvi"]
@@ -8,11 +8,46 @@
 [ext_resource type="PackedScene" uid="uid://c7x6yq4l4y50" path="res://scenes/Debris.tscn" id="6_ngroq"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_216fe"]
 [ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="8_dnqvi"]
+[ext_resource type="Script" uid="uid://cxxfn3rfo4l7x" path="res://scripts/Main.gd" id="9_main"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnqvi"]
 size = Vector2(20.11441, 45.89897)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("9_main")
+
+[node name="WinLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="WinLayer"]
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "Good job you found the exit"
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ResetButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+text = "Reset"
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -342,7 +377,7 @@ texture = ExtResource("8_dnqvi")
 position = Vector2(96, 48)
 
 [node name="Final Room" type="Area2D" parent="."]
-position = Vector2(-255, 2308.0002)
+position = Vector2(-237.99997, 2299.9998)
 scale = Vector2(-13.692933, -6.002226)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room"]
@@ -358,3 +393,6 @@ scale = Vector2(-13.692933, -6.002226)
 position = Vector2(0.10971451, 0.93167114)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_dnqvi")
+
+[connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="body_entered" from="Final Room" to="." method="_on_final_room_body_entered"]
