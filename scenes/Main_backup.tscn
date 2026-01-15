@@ -49,6 +49,63 @@ grow_horizontal = 0
 text = "Reset"
 metadata/_edit_use_anchors_ = true
 
+[node name="QuitButton" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -110.0
+offset_top = 10.0
+offset_right = -70.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="QuitDialog" type="Panel" parent="HUD"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HUD/QuitDialog"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "Close?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/QuitDialog"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -50.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="HUD/QuitDialog/HBoxContainer"]
+layout_mode = 2
+text = "Close Application"
+
+[node name="CancelButton" type="Button" parent="HUD/QuitDialog/HBoxContainer"]
+layout_mode = 2
+text = "Close Menu"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -395,4 +452,7 @@ scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_dnqvi")
 
 [connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="HUD/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/ConfirmButton" to="." method="_on_confirm_quit_pressed"]
+[connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/CancelButton" to="." method="_on_cancel_quit_pressed"]
 [connection signal="body_entered" from="Final Room" to="." method="_on_final_room_body_entered"]
