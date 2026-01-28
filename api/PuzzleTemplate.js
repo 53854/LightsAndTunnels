@@ -149,7 +149,7 @@ function initMqtt() {
       try {
         const parsed = JSON.parse(raw);
         console.log("[MQTT recv payload]", topic, parsed);
-      } catch (e) {}
+      } catch (e) { }
       if (topic === MQTT_TOPIC_COMMAND) {
         handleMqttCommand(msg);
       }
@@ -190,7 +190,7 @@ function detectLocalIp() {
     const preferred = candidates.find((ip) => ip.startsWith("192.168.") || ip.startsWith("10.") || ip.startsWith("172."));
     if (preferred) return preferred;
     if (candidates.length) return candidates[0];
-  } catch (e) {}
+  } catch (e) { }
   return null;
 }
 
@@ -244,7 +244,7 @@ function resolveRemoteMediaName(baseName) {
       res.on("end", () => {
         const text = Buffer.concat(chunks).toString();
         let payload = null;
-        try { payload = JSON.parse(text); } catch (e) {}
+        try { payload = JSON.parse(text); } catch (e) { }
         if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
           return resolve(payload?.name || key);
         }
@@ -285,7 +285,7 @@ function uploadMediaFile(localPath, remoteName) {
         res.on("end", () => {
           const text = Buffer.concat(chunks).toString();
           let payload = null;
-          try { payload = JSON.parse(text); } catch (e) {}
+          try { payload = JSON.parse(text); } catch (e) { }
           if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
             return resolve(payload || { success: true, name });
           }
@@ -337,12 +337,12 @@ function downloadMediaFile(remoteName, localPath) {
         });
       });
       file.on("error", (err) => {
-        try { fs.unlinkSync(tempPath); } catch (e) {}
+        try { fs.unlinkSync(tempPath); } catch (e) { }
         reject(err);
       });
     });
     req.on("error", (err) => {
-      try { fs.unlinkSync(tempPath); } catch (e) {}
+      try { fs.unlinkSync(tempPath); } catch (e) { }
       reject(err);
     });
     req.end();
@@ -467,7 +467,7 @@ function publishAllOutputs() {
 
 function handleMqttCommand(msg) {
   let payload = {};
-  try { payload = JSON.parse(msg.toString()); } catch (e) {}
+  try { payload = JSON.parse(msg.toString()); } catch (e) { }
   const action = payload.action;
   logDebug("MQTT command", action, payload);
   if (action === "initKeys") {
@@ -491,7 +491,7 @@ function handleMqttCommand(msg) {
   }
   if (action === "setState") {
     const newState = payload.state;
-    if (["locked","starting","running","solved","active","uploading","downloading"].includes(newState)) {
+    if (["locked", "starting", "running", "solved", "active", "uploading", "downloading"].includes(newState)) {
       transitionState(newState).catch((err) => {
         console.warn("State transition failed:", err.message || err);
       });

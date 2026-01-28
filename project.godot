@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="fuckywucky"
-run/main_scene="uid://ddsr1nf4ftao5"
+run/main_scene="res://scenes/Boot.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameServer="*res://scripts/GameServer.gd"
 
 [display]
 
