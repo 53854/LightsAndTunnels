@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ddsr1nf4ftao5"]
+[gd_scene load_steps=32 format=3 uid="uid://ddsr1nf4ftao5"]
 
 [ext_resource type="Script" uid="uid://cr0y7q2ymd3om" path="res://scripts/Main.gd" id="1_q8u5g"]
 [ext_resource type="Script" uid="uid://dkmwh6fquqomv" path="res://scripts/PolygonRoom.gd" id="1_room"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmtomufb8r7o7" path="res://assets/wall_concrete.png" id="3_wall"]
 [ext_resource type="Script" uid="uid://dneg2i4v7ocvd" path="res://scripts/ShadowExtruder.gd" id="4_c01mt"]
 [ext_resource type="PackedScene" uid="uid://b8x6yq4l4y4w" path="res://scenes/Player.tscn" id="4_player"]
+[ext_resource type="PackedScene" uid="uid://cvrlgre6ihid7" path="res://scenes/Debris.tscn" id="5_debris"]
 [ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="7_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_nxtc6"]
 [ext_resource type="AudioStream" uid="uid://duf28h1i85nfi" path="res://assets/Audio/you_win.wav" id="12_5xoyc"]
@@ -588,7 +589,7 @@ scale = Vector2(0.33607426, 0.30458042)
 texture = ExtResource("7_jlsqs")
 
 [node name="Player" parent="." instance=ExtResource("4_player")]
-position = Vector2(618, 203)
+position = Vector2(134, -742)
 
 [node name="WinLayer" type="CanvasLayer" parent="."]
 
@@ -992,6 +993,10 @@ scale = Vector2(-13.692933, -6.002226)
 position = Vector2(0.10971451, 0.93167114)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_dnqvi")
+
+[node name="Debris" parent="." instance=ExtResource("5_debris")]
+position = Vector2(676, 419)
+scale = Vector2(0.08, 0.08)
 
 [connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="HUD/QuitButton" to="." method="_on_quit_button_pressed"]

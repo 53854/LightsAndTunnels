@@ -32,3 +32,6 @@ bus = &"SFX"
 
 [node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
+
+[node name="StartPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

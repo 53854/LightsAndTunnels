@@ -8,8 +8,9 @@ extends CharacterBody2D
 @onready var propeller = $Propeller
 @onready var engine_player = $EnginePlayer
 @onready var sfx_player = $SfxPlayer
+@onready var start_player = $StartPlayer
 
-var sound_start = preload("res://assets/Audio/startdrive.ogg")
+var sound_start = preload("res://assets/Audio/roomba_start.ogg")
 var sound_stop = preload("res://assets/Audio/stop.ogg")
 var sound_engine = preload("res://assets/Audio/roomba_during.ogg")
 
@@ -18,6 +19,13 @@ var max_spin_speed := 15.0
 var is_moving := false
 var engine_max_volume_db := 0.0
 var volume_tween: Tween
+var stop_tween: Tween
+
+
+func _ready():
+	if start_player:
+		start_player.stream = sound_start
+		start_player.play()
 
 
 func _physics_process(delta):
@@ -50,7 +58,6 @@ func _physics_process(delta):
 	# Mouse movement logic
 	var target_velocity = Vector2.ZERO
 	
-	# Vérifier si la souris est au-dessus des boutons UI
 	var mouse_pos = get_global_mouse_position()
 	var reset_button = get_tree().root.find_child("ResetButton", true, false)
 	var quit_button = get_tree().root.find_child("QuitButton", true, false)
@@ -58,14 +65,14 @@ func _physics_process(delta):
 	
 	if reset_button:
 		var reset_rect = reset_button.get_global_rect()
-		# Augmenter la hitbox avec une marge de sécurité
+
 		reset_rect = reset_rect.grow(5.0)
 		if reset_rect.has_point(mouse_pos):
 			is_over_button = true
 	
 	if quit_button:
 		var quit_rect = quit_button.get_global_rect()
-		# Augmenter la hitbox avec une marge de sécurité
+	
 		quit_rect = quit_rect.grow(5.0)
 		if quit_rect.has_point(mouse_pos):
 			is_over_button = true
@@ -86,8 +93,6 @@ func _physics_process(delta):
 		# Start roomba with smooth fade in
 		if not is_moving:
 			is_moving = true
-			sfx_player.stream = sound_start
-			sfx_player.play()
 			
 			# Cancel previous tween if exists
 			if volume_tween:
@@ -100,11 +105,11 @@ func _physics_process(delta):
 				engine_player.bus = "SFX"
 				engine_player.play()
 			
-			# Smooth fade in (0.8s)
+			# Smooth fade in (0.3s)
 			volume_tween = create_tween()
 			volume_tween.set_trans(Tween.TRANS_SINE)
 			volume_tween.set_ease(Tween.EASE_OUT)
-			volume_tween.tween_property(engine_player, "volume_db", engine_max_volume_db, 0.8)
+			volume_tween.tween_property(engine_player, "volume_db", engine_max_volume_db, 0.3)
 		
 		# Restart engine if stopped (for loop)
 		if engine_player and not engine_player.playing and is_moving:
@@ -127,8 +132,20 @@ func _physics_process(delta):
 			volume_tween.tween_property(engine_player, "volume_db", -80.0, 0.6)
 			volume_tween.tween_callback(engine_player.stop)
 			
+			# Play stop sound with fade out
 			sfx_player.stream = sound_stop
+			sfx_player.volume_db = 0.0
 			sfx_player.play()
+			
+			# Cancel previous stop tween if exists
+			if stop_tween:
+				stop_tween.kill()
+			
+			# Fade out stop sound (0.3s)
+			stop_tween = create_tween()
+			stop_tween.set_trans(Tween.TRANS_SINE)
+			stop_tween.set_ease(Tween.EASE_IN)
+			stop_tween.tween_property(sfx_player, "volume_db", -80.0, 0.3)
 
 	move_and_slide()
 	
