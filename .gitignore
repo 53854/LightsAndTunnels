@@ -33,7 +33,4 @@ __MACOSX/
 **/api_keys/**
 **/MediaStorage/**
 
-#vscode
-.vscode/**
-
 

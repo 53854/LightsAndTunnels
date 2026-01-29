@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boqjblatxsxw0"
-path="res://.godot/imported/debris_box.png-62ad3070d9a75b2857f5aec0031ae2d1.ctex"
+uid="uid://brl057ho7aihm"
+path="res://.godot/imported/propeller.png-f4005e1e69246c7592dd254a9a9407bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/debris_box.png"
-dest_files=["res://.godot/imported/debris_box.png-62ad3070d9a75b2857f5aec0031ae2d1.ctex"]
+source_file="res://assets/propeller.png"
+dest_files=["res://.godot/imported/propeller.png-f4005e1e69246c7592dd254a9a9407bb.ctex"]
 
 [params]
 

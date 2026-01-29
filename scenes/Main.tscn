@@ -1,17 +1,140 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddsr1nf4ftao5"]
+[gd_scene load_steps=32 format=3 uid="uid://ddsr1nf4ftao5"]
 
-[ext_resource type="Script" uid="uid://c6afd0gcm4iga" path="res://scripts/Main.gd" id="1_q8u5g"]
+[ext_resource type="Script" uid="uid://cr0y7q2ymd3om" path="res://scripts/Main.gd" id="1_q8u5g"]
 [ext_resource type="Script" uid="uid://dkmwh6fquqomv" path="res://scripts/PolygonRoom.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="2_floor"]
 [ext_resource type="Texture2D" uid="uid://dmtomufb8r7o7" path="res://assets/wall_concrete.png" id="3_wall"]
 [ext_resource type="Script" uid="uid://dneg2i4v7ocvd" path="res://scripts/ShadowExtruder.gd" id="4_c01mt"]
 [ext_resource type="PackedScene" uid="uid://b8x6yq4l4y4w" path="res://scenes/Player.tscn" id="4_player"]
-[ext_resource type="PackedScene" uid="uid://c7x6yq4l4y50" path="res://scenes/Debris.tscn" id="5_debris"]
+[ext_resource type="PackedScene" uid="uid://cvrlgre6ihid7" path="res://scenes/Debris.tscn" id="5_debris"]
+[ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="7_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_nxtc6"]
-[ext_resource type="Texture2D" uid="uid://dnfphs1fq0x46" path="res://assets/placeholder/arrow.png" id="8_q8u5g"]
+[ext_resource type="AudioStream" uid="uid://duf28h1i85nfi" path="res://assets/Audio/you_win.wav" id="12_5xoyc"]
+[ext_resource type="AudioStream" uid="uid://bfge3kgdk3pfv" path="res://assets/Audio/win_song.mp3" id="13_0j7oj"]
+[ext_resource type="AudioStream" uid="uid://cw0mngxnu5hqu" path="res://assets/Audio/button.mp3" id="14_button"]
+[ext_resource type="Script" uid="uid://3era6gdqgc05" path="res://scripts/FinalRoom.gd" id="17_0mwcd"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_firework1"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.2, 0.8, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_firework2"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 1, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_firework3"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(0.2, 1, 0.2, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_firework4"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.5, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_firework5"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(0, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnqvi"]
 size = Vector2(20.11441, 45.89897)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom1"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.2, 0.8, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom2"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 1, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom3"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(0.2, 1, 0.2, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom4"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.5, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom5"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(0, 1, 1, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom6"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.2, 0.8, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom7"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 1, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom8"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(0.2, 1, 0.2, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom9"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.5, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom10"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(0, 1, 1, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom11"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 0.2, 0.8, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_finalroom12"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 150, 0)
+color = Color(1, 1, 0, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_q8u5g")
@@ -27,32 +150,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="LockedLayer" type="CanvasLayer" parent="."]
-layer = 50
-
-[node name="ColorRect" type="ColorRect" parent="LockedLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="LockedLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "GAME LOCKED"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.08, 1)
@@ -78,10 +175,6 @@ texture_mode = 1
 
 [node name="ShadowExtruder" type="Node2D" parent="PolygonRoom"]
 script = ExtResource("4_c01mt")
-
-[node name="Debris" parent="." instance=ExtResource("5_debris")]
-position = Vector2(50, 50)
-rotation = 0.5
 
 [node name="greenlamp" type="PointLight2D" parent="."]
 position = Vector2(104, 104)
@@ -451,52 +544,52 @@ texture_scale = 0.35
 position = Vector2(72.000015, 48)
 rotation = 1.5707964
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="upArrow2" type="Sprite2D" parent="."]
 position = Vector2(136, -760)
 rotation = 1.5707964
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="rightArrow" type="Sprite2D" parent="."]
 position = Vector2(144, -512)
 rotation = 3.1415927
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="rightArrow2" type="Sprite2D" parent="."]
 position = Vector2(-376, 119.99994)
 rotation = 3.1415927
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="downArrow" type="Sprite2D" parent="."]
 position = Vector2(640, -376)
 rotation = 4.712389
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="downArrow2" type="Sprite2D" parent="."]
 position = Vector2(-447.99988, -912)
 rotation = 4.712389
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="leftArrow" type="Sprite2D" parent="."]
 position = Vector2(576, 360)
 rotation = 6.2831855
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="leftArrow2" type="Sprite2D" parent="."]
 position = Vector2(96, -1111.9999)
 rotation = 6.2831855
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("8_q8u5g")
+texture = ExtResource("7_jlsqs")
 
 [node name="Player" parent="." instance=ExtResource("4_player")]
-position = Vector2(238, -740)
+position = Vector2(134, -742)
 
 [node name="WinLayer" type="CanvasLayer" parent="."]
 
@@ -523,22 +616,20 @@ uppercase = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -60.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = 41.0
+offset_left = -57.0
+offset_top = 12.0
+offset_right = -11.0
+offset_bottom = 42.0
 grow_horizontal = 0
-text = "Reset"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_font_sizes/font_size = 10
+text = "↻ RESET"
 
-[node name="QuitButton" type="Button" parent="HUD"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -110.0
-offset_top = 10.0
-offset_right = -70.0
-offset_bottom = 50.0
-grow_horizontal = 0
+[node name="ButtonSound" type="AudioStreamPlayer" parent="HUD"]
+stream = ExtResource("14_button")
 
 [node name="QuitDialog" type="Panel" parent="HUD"]
 visible = false
@@ -587,15 +678,296 @@ text = "Close Application"
 layout_mode = 2
 text = "Close Menu"
 
+[node name="RoombaStartSound" type="AudioStreamPlayer" parent="HUD"]
+
+[node name="TimerLabel" type="Label" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 50.0
+offset_right = -10.0
+offset_bottom = 80.0
+grow_horizontal = 0
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VictoryTitle" type="Label" parent="HUD"]
+visible = false
+modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(500, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "CONGRATULATIONS
+YOU FOUND THE EXIT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VictoryTimeLabel" type="Label" parent="HUD"]
+visible = false
+modulate = Color(1, 1, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "TIME: 00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fireworks" type="Node2D" parent="HUD"]
+visible = false
+
+[node name="Firework1" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(-150, -80)
+emitting = false
+amount = 150
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework1")
+
+[node name="Firework2" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(150, -80)
+emitting = false
+amount = 150
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework2")
+
+[node name="Firework3" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(-200, -40)
+emitting = false
+amount = 150
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework3")
+
+[node name="Firework4" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(200, -40)
+emitting = false
+amount = 150
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework4")
+
+[node name="Firework5" type="GPUParticles2D" parent="HUD/Fireworks"]
+emitting = false
+amount = 150
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework5")
+
+[node name="FireworkTop1" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(-100, -150)
+emitting = false
+amount = 150
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework1")
+
+[node name="FireworkTop2" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(0, -150)
+emitting = false
+amount = 50
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework2")
+
+[node name="FireworkTop3" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(100, -150)
+emitting = false
+amount = 50
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework3")
+
+[node name="FireworkSideL1" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(-240, -100)
+emitting = false
+amount = 50
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework4")
+
+[node name="FireworkSideL2" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(-240, 0)
+emitting = false
+amount = 50
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework5")
+
+[node name="FireworkSideR1" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(240, -100)
+emitting = false
+amount = 50
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework1")
+
+[node name="FireworkSideR2" type="GPUParticles2D" parent="HUD/Fireworks"]
+position = Vector2(240, 0)
+emitting = false
+amount = 50
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_firework2")
+
 [node name="Final Room" type="Area2D" parent="."]
 position = Vector2(-962.9999, 2643)
 rotation = 3.1415927
 scale = Vector2(13.692933, 6.002226)
+script = ExtResource("17_0mwcd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Final Room"]
 position = Vector2(0.10971451, 0.93167114)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_dnqvi")
+
+[node name="WinPlayer" type="AudioStreamPlayer" parent="Final Room"]
+stream = ExtResource("12_5xoyc")
+
+[node name="AmbiancePlayer" type="AudioStreamPlayer" parent="Final Room"]
+stream = ExtResource("13_0j7oj")
+
+[node name="Fireworks" type="Node2D" parent="Final Room"]
+
+[node name="Firework1" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(-200, -200)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom1")
+
+[node name="Firework2" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(200, -200)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom2")
+
+[node name="Firework3" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(-200, 200)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom3")
+
+[node name="Firework4" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(200, 200)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom4")
+
+[node name="Firework5" type="GPUParticles2D" parent="Final Room/Fireworks"]
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom5")
+
+[node name="FireworkTop1" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(-200, -300)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom6")
+
+[node name="FireworkTop2" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(0, -300)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom7")
+
+[node name="FireworkTop3" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(200, -300)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom8")
+
+[node name="FireworkSideL1" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(-300, -100)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom9")
+
+[node name="FireworkSideL2" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(-300, 100)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom10")
+
+[node name="FireworkSideR1" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(300, -100)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom11")
+
+[node name="FireworkSideR2" type="GPUParticles2D" parent="Final Room/Fireworks"]
+position = Vector2(300, 100)
+emitting = false
+amount = 150
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_finalroom12")
 
 [node name="Final Room" type="Area2D" parent="Final Room"]
 position = Vector2(-255, 2308.0002)
@@ -606,8 +978,10 @@ position = Vector2(0.10971451, 0.93167114)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_dnqvi")
 
+[node name="Debris" parent="." instance=ExtResource("5_debris")]
+position = Vector2(676, 419)
+scale = Vector2(0.08, 0.08)
+
 [connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
-[connection signal="pressed" from="HUD/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/ConfirmButton" to="." method="_on_confirm_quit_pressed"]
 [connection signal="pressed" from="HUD/QuitDialog/HBoxContainer/CancelButton" to="." method="_on_cancel_quit_pressed"]
-[connection signal="body_entered" from="Final Room" to="." method="_on_final_room_body_entered"]

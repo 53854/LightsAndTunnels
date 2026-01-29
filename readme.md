@@ -1,1 +1,0 @@
-requires node.js and putty to run with puzzlehub
