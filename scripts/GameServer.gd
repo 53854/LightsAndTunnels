@@ -15,6 +15,21 @@ func _ready():
 	add_child(http_request)
 	http_request.request_completed.connect(_on_request_completed)
 
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_F1:
+			print("DEBUG: F1 -> Locked")
+			set_api_state("locked")
+		elif event.keycode == KEY_F2:
+			print("DEBUG: F2 -> Starting")
+			set_api_state("starting")
+		elif event.keycode == KEY_F3:
+			print("DEBUG: F3 -> Running")
+			set_api_state("running")
+		elif event.keycode == KEY_F4:
+			print("DEBUG: F4 -> Solved")
+			set_api_state("solved")
+
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		stop_server()
@@ -90,9 +105,28 @@ func check_health() -> void:
 	http_request.request(API_URL + "/getState")
 
 func set_api_state(state: String) -> void:
+	var sender = HTTPRequest.new()
+	add_child(sender)
+	sender.timeout = 5.0
+	sender.request_completed.connect(func(_result, _code, _headers, _body): sender.queue_free())
+	
 	var json = JSON.stringify({"state": state})
 	var headers = ["Content-Type: application/json"]
-	http_request.request(API_URL + "/setState", headers, HTTPClient.METHOD_POST, json)
+	var err = sender.request(API_URL + "/setState", headers, HTTPClient.METHOD_POST, json)
+	if err != OK:
+		print("Error sending state '%s': %d" % [state, err])
+		sender.queue_free()
+
+func send_restart_complete() -> void:
+	var sender = HTTPRequest.new()
+	add_child(sender)
+	sender.timeout = 5.0
+	sender.request_completed.connect(func(_result, _code, _headers, _body): sender.queue_free())
+	
+	var err = sender.request(API_URL + "/restartComplete", [], HTTPClient.METHOD_POST)
+	if err != OK:
+		print("Error sending restartComplete: ", err)
+		sender.queue_free()
 
 func poll_state() -> void:
 	http_request.request(API_URL + "/getState")

@@ -16,10 +16,17 @@ func _ready():
 	# Connect to Global GameServer signals
 	GameServer.state_changed.connect(_on_api_state_changed)
 	
+	# Handle "starting" state handshake
+	if GameServer.current_state == "starting":
+		GameServer.send_restart_complete()
+	
 	# In case we entered with a state already set (e.g. from Boot)
 	_on_api_state_changed(GameServer.current_state)
 
 func _on_api_state_changed(new_state):
+	if not is_inside_tree():
+		return
+		
 	print("Game: API State is now ", new_state)
 	
 	if new_state == "starting":
