@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://ctd6jcuda86ft"]
-
-[node name="Debris2" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(555, 340)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
