@@ -1,0 +1,17 @@
+{
+  "hubHost": "192.168.100.23",
+  "mqttBroker": "192.168.100.23",
+  "mqttPort": 1883,
+  "puzzleName": "lat",
+  "heartbeatIntervalMs": 2000,
+  "debug": false,
+  "mediaServer": "http://escapehub.local",
+  "mediaLocalDir": "MediaStorage",
+  "printData": true,
+  "needRestart": true,
+  "externalCheck": {
+    "active": false,
+    "value": ""
+  },
+  "outputs": {}
+}
