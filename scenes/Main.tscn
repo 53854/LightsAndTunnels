@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://ddsr1nf4ftao5"]
 
-[ext_resource type="Script" uid="uid://cxxfn3rfo4l7x" path="res://scripts/Main.gd" id="1_q8u5g"]
+[ext_resource type="Script" uid="uid://c6afd0gcm4iga" path="res://scripts/Main.gd" id="1_q8u5g"]
 [ext_resource type="Script" uid="uid://dkmwh6fquqomv" path="res://scripts/PolygonRoom.gd" id="1_room"]
 [ext_resource type="Texture2D" uid="uid://cimiuh58asgku" path="res://assets/floor_industrial.png" id="2_floor"]
 [ext_resource type="Texture2D" uid="uid://dmtomufb8r7o7" path="res://assets/wall_concrete.png" id="3_wall"]
 [ext_resource type="Script" uid="uid://dneg2i4v7ocvd" path="res://scripts/ShadowExtruder.gd" id="4_c01mt"]
 [ext_resource type="PackedScene" uid="uid://b8x6yq4l4y4w" path="res://scenes/Player.tscn" id="4_player"]
 [ext_resource type="PackedScene" uid="uid://c7x6yq4l4y50" path="res://scenes/Debris.tscn" id="5_debris"]
-[ext_resource type="Texture2D" uid="uid://b3ivpr0tplnfv" path="res://assets/placeholder/arrow.jpg" id="7_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://lbrsyy7qd0b" path="res://assets/light_texture.png" id="7_nxtc6"]
+[ext_resource type="Texture2D" uid="uid://dnfphs1fq0x46" path="res://assets/placeholder/arrow.png" id="8_q8u5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnqvi"]
 size = Vector2(20.11441, 45.89897)
@@ -18,6 +18,15 @@ script = ExtResource("1_q8u5g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="LockedLayer" type="CanvasLayer" parent="."]
 layer = 50
@@ -44,15 +53,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
 text = "GAME LOCKED"
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.08, 0.08, 0.08, 1)
@@ -451,49 +451,49 @@ texture_scale = 0.35
 position = Vector2(72.000015, 48)
 rotation = 1.5707964
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="upArrow2" type="Sprite2D" parent="."]
 position = Vector2(136, -760)
 rotation = 1.5707964
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="rightArrow" type="Sprite2D" parent="."]
 position = Vector2(144, -512)
 rotation = 3.1415927
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="rightArrow2" type="Sprite2D" parent="."]
 position = Vector2(-376, 119.99994)
 rotation = 3.1415927
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="downArrow" type="Sprite2D" parent="."]
 position = Vector2(640, -376)
 rotation = 4.712389
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="downArrow2" type="Sprite2D" parent="."]
 position = Vector2(-447.99988, -912)
 rotation = 4.712389
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="leftArrow" type="Sprite2D" parent="."]
 position = Vector2(576, 360)
 rotation = 6.2831855
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="leftArrow2" type="Sprite2D" parent="."]
 position = Vector2(96, -1111.9999)
 rotation = 6.2831855
 scale = Vector2(0.33607426, 0.30458042)
-texture = ExtResource("7_jlsqs")
+texture = ExtResource("8_q8u5g")
 
 [node name="Player" parent="." instance=ExtResource("4_player")]
 position = Vector2(238, -740)
