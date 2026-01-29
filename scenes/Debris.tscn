@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7x6yq4l4y50"]
+
+[ext_resource type="Texture2D" uid="uid://b822dndf7234" path="res://assets/debris_box.png" id="1_debris"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_debris"]
+size = Vector2(30, 30)
+
+[node name="Debris" type="RigidBody2D"]
+mass = 2.0
+gravity_scale = 0.0
+linear_damp = 5.0
+angular_damp = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03125, 0.03125)
+texture = ExtResource("1_debris")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_debris")
